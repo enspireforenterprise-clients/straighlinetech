@@ -4,15 +4,15 @@ if( ! class_exists( 'SC_Team_Member_CPT' ) ) {
 
   class SC_Team_Member_CPT {
 
-    CONST POST_TYPE      = 'sc-team-member';
-    CONST GROUP_TAXONOMY = 'sc-team-member-group';
+    // CONST POST_TYPE      = 'sc-team-member';
+    // CONST GROUP_TAXONOMY = 'sc-team-member-group';
 
-    function __construct() {
+    // function __construct() {
       
-      add_action( 'init', array( $this, 'register_post_type' ) );
-      add_action( 'init', array( $this, 'register_group_taxonomy' ) );
+    //   add_action( 'init', array( $this, 'register_post_type' ) );
+    //   add_action( 'init', array( $this, 'register_group_taxonomy' ) );
 
-    }
+    // }
 
     // public function register_post_type() {
 
