@@ -1,0 +1,44 @@
+
+// Image Module
+// -----------------------------------------------------------------------------
+
+.scm-image {
+	&__container {
+		background: $neutral-3;
+		position: relative;
+		width: 100%;
+		&__link {
+			bottom: 0;
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		&__image {
+			bottom: 0;
+			display: block;
+			height: 100%;
+			left: 0;
+			opacity: 1;
+			position: absolute;
+			right: 0;
+			top: 0;
+			transition: opacity 300ms ease;
+			width: 100%;
+			&--lazy-load {
+				opacity: 0;
+			}
+			&--bordered {
+				border: 1px solid $neutral-10;
+			}
+		}
+	}
+  &__caption {
+    color: $neutral-10;
+    display: block;
+		@include rem(font-size, 13px);
+		@include rem(line-height, 20px);
+    margin: 5px 0 0 0;
+    text-align: left;
+  }
+}

@@ -1,0 +1,190 @@
+{
+	"key": "scm_title",
+	"label": "Title",
+	"name": "title",
+	"display": "block",
+	"sub_fields": [
+		{
+			"key": "scm_title_content",
+			"label": "Content",
+			"name": "content",
+			"type": "group",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "70",
+				"class": "",
+				"id": ""
+			},
+			"layout": "block",
+			"sub_fields": [
+				{
+					"key": "scm_title_overline",
+					"label": "Overline",
+					"name": "overline",
+					"type": "text",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"placeholder": "",
+					"prepend": "",
+					"append": "",
+					"maxlength": "",
+					"readonly": 0,
+					"disabled": 0
+				},
+				{
+					"key": "scm_title_title",
+					"label": "Title",
+					"name": "title",
+					"type": "text",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"placeholder": "",
+					"prepend": "",
+					"append": "",
+					"maxlength": "",
+					"readonly": 0,
+					"disabled": 0
+				},
+				{
+					"key": "scm_title_sub_title",
+					"label": "Sub Title",
+					"name": "sub_title",
+					"type": "text",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"placeholder": "",
+					"prepend": "",
+					"append": "",
+					"maxlength": "",
+					"readonly": 0,
+					"disabled": 0
+				}
+			]
+		},
+		{
+			"key": "scm_title_options",
+			"label": "Options",
+			"name": "options",
+			"type": "group",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "30",
+				"class": "",
+				"id": ""
+			},
+			"layout": "block",
+			"sub_fields": [
+				{
+					"key": "scm_title_type",
+					"label": "Type",
+					"name": "type",
+					"type": "select",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"choices": {
+						"1": "Header 1",
+						"2": "Header 2",
+						"3": "Header 3",
+						"4": "Header 4",
+						"5": "Header 5",
+						"6": "Header 6"
+					},
+					"default_value": "2",
+					"allow_null": 0,
+					"multiple": 0,
+					"ui": 0,
+					"ajax": 0,
+					"return_format": "value",
+					"placeholder": ""
+				},
+				{
+					"key": "scm_title_style",
+					"label": "Text Size",
+					"name": "text_size",
+					"type": "select",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"choices": {
+						"xsmall": "XSmall",
+						"small": "Small",
+						"medium": "Medium",
+						"large": "Large",
+						"xlarge": "XLarge"
+					},
+					"default_value": "medium",
+					"allow_null": 0,
+					"multiple": 0,
+					"ui": 0,
+					"ajax": 0,
+					"return_format": "value",
+					"placeholder": ""
+				},
+				{
+					"key": "scm_sub_title_style",
+					"label": "Subtitle/Overline Style",
+					"name": "subtitle_style",
+					"type": "select",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"choices": {
+						"normal": "Normal",
+						"italic": "Italic",
+						"bold": "Bold"
+					},
+					"default_value": "normal",
+					"allow_null": 0,
+					"multiple": 0,
+					"ui": 0,
+					"ajax": 0,
+					"return_format": "value",
+					"placeholder": ""
+				}
+			]
+		}
+	],
+	"min": "",
+	"max": ""
+}

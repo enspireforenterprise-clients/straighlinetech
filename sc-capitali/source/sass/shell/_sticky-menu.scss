@@ -1,0 +1,243 @@
+
+// Sticky Menu
+// -----------------------------------------------------------------------------
+
+.sticky-menu {
+	bottom: 0;
+	padding: 10px 10px 20px 10px;
+	position: fixed;
+	right: 0;
+	width: 100vw;
+	.force-hide-sticky-links & {
+		display: none !important;
+	}
+	@media #{$lg-up} {
+		bottom: initial;
+		padding: 0;
+		position: absolute;
+		right: 25px;
+		top: 120px;
+		width: auto;
+	}
+	&__toggle {
+		display: none;
+		@media #{$lg-up} {
+			display: none !important;
+		}
+	}
+	.button {
+		height: 22px;
+		line-height: 22px;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+	.menu {
+		display: block;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.menu-item {
+		display: block;
+		float: left;
+		margin: 0;
+		padding: 0;
+		text-align: left;
+		width: 50%;
+		@media #{$lg-up} {
+			display: flex;
+			justify-content: flex-end;
+			margin: 2px 0;
+			text-align: right;
+			float: none;
+			width: auto;
+		}
+		a {
+			@extend .clearfix;
+			background: transparent;
+			border: 1px solid transparent;
+			display: block;
+			padding: 0;
+			position: relative;
+			text-decoration: none !important;
+			@media #{$lg-up} {
+				align-items: center;
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-end;
+			}
+			@include hover() {
+				@media #{$lg-up} {					
+					.menu-item__title {
+						background: $primary-color;
+						opacity: 1;
+						@media #{$lg-up}{
+							padding: 5px;
+							font-size: 1.1rem;
+						}
+					}
+					.menu-item__icon {
+						background: $primary-color;
+						@media #{$lg-up}{
+							flex-shrink: 0;
+						}
+					}
+				}
+			}
+		}
+		&__title {
+			color: #fff;
+			display: inline-block;
+			flex-grow: 1;
+			font-size: .8rem;
+			font-weight: 600;
+			letter-spacing: .15em;
+			margin: 0 5px 0 0;
+			padding: 15px 0 15px 29px;
+			text-decoration: none !important;
+			text-transform: uppercase;
+			transition: background $transition-fast ease, color $transition-fast ease;
+			line-height: 1;
+			white-space: nowrap;
+			width: 100%;
+			@media #{$lg-up} {
+				flex-grow: initial;
+				font-size: 1.1rem;
+				padding: 5px;
+			}
+		}
+		&__icon {
+			align-items: center;
+			border-radius: 50%;
+			display: inline-flex;
+			flex-grow: 1;
+			height: 21px;
+			left: 3px;
+			justify-content: center;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			transition: background $transition-fast ease;
+			width: 21px;
+			@media #{$lg-up} {
+				border-radius: 50%;
+				height: 35px;
+				position: static;
+				transform: none;
+				width: 35px;
+				flex-shrink: 0;
+			}
+			img,
+			svg {
+				display: block;
+				fill: #fff;
+				height: auto;
+				max-width: 12px;
+				max-height: 12px;
+				transition: fill $transition-fast ease;
+				width: auto;
+				@media #{$lg-up} {
+					max-width: 26px;
+					max-height: 26px;
+				}
+			}
+		}
+	}
+}
+
+.sticky-menu--collapsed {
+	.sticky-menu__toggle {
+		background: #fff;
+		border: 1px solid $neutral-5;
+		border-right: 0;
+		bottom: 21px;
+		display: block;
+		font-size: 0;
+		height: 22px;
+		left: 10px;
+		position: absolute;
+		width: 50px;
+		circle {
+			fill: $neutral-6;
+		}
+	}
+	.button {
+		margin: 0 0 0 50px;
+		width: calc( 100% - 50px );
+	}
+	.menu {
+		display: none;
+		@media #{$lg-up} {
+			display: block;
+		}
+	}
+	.menu-item a {
+		@extend .clearfix;
+		border: 1px solid transparent;
+		display: block;
+		position: relative;
+		@media #{$lg-up}{
+			padding: 0;
+		}
+		.menu-item__title {
+			background: transparent;
+			color: #fff;
+			opacity: 0;
+			padding: 15px 0 15px 29px;
+			@media #{$lg-up}{
+				display: none;
+				padding: 0;
+			}
+		}
+		.menu-item__icon {			
+			background: $primary-color;
+			@media #{$lg-up}{
+				flex-shrink: 0;
+			}
+		}
+		@include hover() {
+			.menu-item__title {
+				background: $primary-color;
+				opacity: 1;
+				@media #{$lg-up}{
+					padding: 5px;
+					display: block;
+					font-size: 1.1rem;
+				}
+			}
+		}
+	}
+}
+
+.sticky-menu--mobile-drawer {
+	.menu {
+		display: block;
+		transform: translateY(1px);
+	}
+	.menu-item a {
+		@extend .clearfix;
+		background: $neutral-9;
+		border: 1px solid $neutral-10;
+		display: block;
+		position: relative;
+		@media #{$lg-up}{
+			padding: 0;
+		}
+		.menu-item__title {
+			background: transparent;
+			color: #fff;
+			float: left;
+			opacity: 1;
+			padding: 15px 0 15px 29px;
+		}
+		.menu-item__icon {			
+			background: $primary-color;
+			border-radius: 50%;
+			left: 3px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+}

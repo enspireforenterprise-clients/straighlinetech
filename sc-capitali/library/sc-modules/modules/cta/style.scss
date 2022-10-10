@@ -1,0 +1,199 @@
+
+// CTS Module
+// -----------------------------------------------------------------------------
+
+
+.scm-cta-content .btn-white:hover {
+    box-shadow: 0 0 11px rgba(255, 255, 255, 30%);
+    background-color: transparent;
+    cursor: pointer;
+}
+.scm-cta {
+   
+    .scm-pad-md-zero
+    {
+        @media(min-width:992px)
+        {
+            padding-left: 0!important;
+            padding-right: 0!important;
+        }
+    }
+	margin-left: -15px !important;
+	margin-right: -15px !important;
+	overflow: hidden;
+	position: relative;
+	.cts-content-block {
+       
+        display: flex;
+        flex-flow: column;        
+        align-items: center;
+        justify-content: center;  
+        margin-bottom: 20px;      
+        @media #{$lg_up} {
+            text-align: left;
+            flex-flow: row nowrap;
+            margin-bottom: 0px; 
+            max-height: 800px;
+            overflow: hidden; 
+            &:nth-child(even) {
+                flex-flow: row-reverse;
+                // text-align: right;
+            }
+        }              
+        .cta-block-image {
+            width: 50%;
+            min-width: 50%;
+            height: 50%;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;  
+            display: flex;
+            flex-flow: column;        
+            align-items: center;
+            justify-content: center;    
+            text-align: center;          
+           
+            img {
+                display: inline;
+                margin: 0 auto;
+                height: 100%;
+                width: 100%;
+            }
+        }
+       
+        .scm-cta-content {
+            font-family: $primary-font-family;
+            position: relative;
+            @media #{$md-up} {
+                padding: 65px;
+                font-size: 2.2rem;
+                line-height: 3rem;
+                width: 100%;
+            }
+            a{
+                margin-top: 25px;
+            }
+            ul{
+                padding-left: 20px;
+                li{
+                    list-style-type: none;
+                    position: relative;
+                }
+            }
+        } 
+        
+        .btn-white
+        {
+            color: #ffffff!important;
+            border-color: #ffffff;
+        }
+        .btn-dark:hover {
+            color: #ffffff!important;
+            box-shadow: 0 0 11px #fff;
+            cursor: pointer;
+        }
+        
+	}
+
+    
+
+    .Primary-Color{
+        background-color: $primary-color;
+        ul li:before{
+            content: '.';
+            position: absolute;
+            font-size: 75px;
+            color: $primary-color;
+            top: -23px;
+            left: -25px;  
+        }
+    }
+
+    .Primary-Color-Light
+    {
+        background-color: $primary-color-light;
+        ul li:before{
+            content: '.';
+            position: absolute;
+            font-size: 75px;
+            color: $primary-color;
+            top: -23px;
+            left: -25px;  
+        } 
+    }
+    .Secondary-Color
+    {
+        background-color: $secondary-color;
+
+        ul li:before{
+            content: '.';
+            position: absolute;
+            font-size: 75px;
+            color: $neutral-11;
+            top: -23px;
+            left: -25px;  
+        }
+    }
+    .Tertiary-Color
+    {
+        background-color: $tertiary-color;
+    }
+
+	&[data-align='right'] {
+		@media #{$lg_up} {
+			.cts-content-block {
+				// text-align: right;
+                flex-flow: row-reverse;
+                &:nth-child(even) {
+                    flex-flow: row nowrap;
+                    text-align: left;
+                }                
+			}
+		}
+	}
+}
+
+@media(min-width:1200px)
+{
+    .scm-cta .cts-content-block
+    {
+        .scm-cta-content
+        {
+            .scm-inner-wraper-content {
+                max-width: 625px;
+            }
+        }
+    }
+    .scm-cta .cts-content-block:nth-child(even) .scm-inner-wraper-content, .scm-cta[data-align='right'] .cts-content-block .scm-inner-wraper-content {
+        float: right;
+    }
+    .scm-cta[data-align='right'] .cts-content-block:nth-child(even) .scm-inner-wraper-content {
+        float: left;
+    }
+}
+
+
+@media(max-width:1280px) and (min-width:992px)
+{
+    .scm-cta .cts-content-block .cta-block-image img
+    {
+        width: 40em;
+    }
+}
+
+@media(max-width:992px)
+{
+    .scm-cta .cts-content-block .cta-block-image {
+        width: 100%;
+        min-width: 100%;
+        height: 100%;
+    }
+    .sc-module-container-fluid {
+        padding: 0;
+    }
+    .scm-cta .cts-content-block .scm-cta-content {
+        padding: 45px 30px 25px 30px;
+    }
+    .scm-cta .cts-content-block
+    {margin-bottom: 0;}
+}

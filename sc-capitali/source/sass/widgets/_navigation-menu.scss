@@ -1,0 +1,144 @@
+
+// Sidebar Nav Widget
+// -----------------------------------------------------------------------------
+
+.widget_nav_menu {
+	.menu,
+	.sub-menu {
+		list-style: none;
+		a {
+			display: block;
+			position: relative;
+			text-decoration: none;
+			@include hover() {
+				text-decoration: none;
+				span::after {
+					width: 100%;
+				}
+			}
+			span {
+				position: relative;
+				&::after {
+					background: $primary-font-color;
+					bottom: -2px;
+					content: '';
+					display: block;
+					height: 1px;
+					left: 0;
+					position: absolute;
+					transition: width $transition-fast ease;
+					width: 0%;
+				}
+			}
+		}
+	}
+	.menu > .menu-item {
+		border-bottom: 1px solid $border-color;
+		&.expanded-menu-item {
+			padding: 0 0 5px 0;
+			> a {
+				&::after {
+					right: 2px;
+					transform: rotate(90deg);
+				}
+			}
+		}
+		&.current-menu-item {
+			> a {
+				color: $primary-color;
+				cursor: default;
+			}
+		}
+		> a {
+			color: $primary-font-color;
+			padding: 10px 0;
+			font-size: 1.6rem;
+			font-weight: 500;
+		}
+		&.menu-item-has-children {
+			> a {
+				&::after {
+					@include arrow('right', $primary-color, 5px);
+					position: absolute;
+					right: 0;
+					top: 16px;
+				}
+				
+			}
+			> .sub-menu {
+				display: none;
+			}
+		}
+		&.current-menu-item.menu-item-has-children,&.current-menu-ancestor {
+			> a {
+				&::after {
+					right: 2px;
+					transform: rotate(90deg);
+				}
+			}
+			> .sub-menu {
+				display: block;
+			}
+		}
+	}
+	.menu > .menu-item > .sub-menu > .menu-item {
+
+		padding: 0 0 0 15px;
+		&.current-menu-item {
+			> a {
+				font-weight: 500;
+				color: $primary-color;
+			}
+		}
+		&:last-child {
+			margin: 0 0 10px 0;
+		}
+		> a {
+			border: 0;
+			color: $link-color;
+			font-weight: 400;
+			padding: 3px 0;
+		}
+
+		.sub-menu {
+			.current-menu-item {
+				> a {
+					font-weight: 500;
+					color: $primary-color;
+				}
+			}
+		}
+
+		&.menu-item-has-children {
+			> a {
+				&::after {
+					@include arrow('right', $primary-color, 5px);
+					position: absolute;
+					right: 0;
+					top: 9px;
+				}
+				
+			}
+			> .sub-menu {
+				display: none;
+			}
+		}
+		&.current-menu-item.menu-item-has-children,&.current-menu-ancestor {
+			> a {
+				&::after {
+					right: 2px;
+					transform: rotate(90deg);
+				}
+			}
+			> .sub-menu {
+				display: block;
+			}
+		}
+
+		> .sub-menu {
+			.menu-item {
+				padding: 0 0 0 15px;
+			}
+		}
+	}
+}

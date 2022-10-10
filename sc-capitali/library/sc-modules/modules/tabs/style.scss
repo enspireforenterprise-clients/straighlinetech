@@ -1,0 +1,126 @@
+// Tabs Module
+// -----------------------------------------------------------------------------
+
+.scm-tabs {
+	margin-bottom: 60px;
+	.section-label {
+		display: none;
+	}
+	.section-labels {
+		display: block;
+		margin: 0 0 -1px 0;
+		position: relative;
+		@extend .clearfix;
+		ul {
+			display: block;
+			margin: 0;
+			padding: 0;
+			@include clearfix();
+		}
+		.section-label {
+			appearance: none;
+			background: $tab-label-selected-background-color;
+			border: 1px solid $tab-label-selected-border-color;
+			border-bottom: 1px solid #fff;
+			color: $tab-label-selected-font-color;
+			cursor: pointer;
+			display: block;
+			float: left;
+			font-size: 1.3rem;
+			font-weight: 600;
+			letter-spacing: .1em;
+			margin: 0 10px 0 0;
+			padding: 10px 55px;
+			text-transform: uppercase;
+			&[data-active='no'] {
+				background: $tab-label-background-color;
+				border: 1px solid $tab-label-border-color;
+				border-bottom: 1px solid $border-color;
+				color: $tab-label-font-color;
+				cursor: pointer;
+			}
+		}
+	}
+	.section-panel {
+		@extend .clearfix;
+		@extend .sc-wysiwyg;
+		border: 1px solid $tab-panel-border-color;
+		display: none;
+		padding: 40px;
+		&[data-active='yes'] {
+			display: block;
+		}
+		@media print {
+			display: block;
+		}
+	}
+}
+
+.scm-accordion {
+	border-bottom: 0;
+	h2.button-wrap,
+	h3.button-wrap,
+	h4.button-wrap,
+	h5.button-wrap,
+	h6.button-wrap {
+		margin-bottom: 0;
+		line-height: 38px;
+		&:after {
+			display: none;
+		}
+	}
+	.section-labels {
+		height: 0;
+		overflow: hidden;
+		visibility: hidden;
+	}
+	.section-label {
+		appearance: none;
+		background: $tab-label-selected-background-color;
+		border: 1px solid $tab-label-selected-border-color;
+		color: $tab-label-selected-font-color;
+		cursor: pointer;
+		display: block;
+		font-family: $primary-font-family;
+		font-size: 1.2rem;
+		font-weight: 500;
+		height: auto;
+		letter-spacing: .15em;
+		line-height: 1.4;
+		margin: 0 0 -1px 0;
+		padding: 12px 60px 10px 20px;
+		position: relative;
+		text-align: left;
+		text-transform: uppercase;
+		white-space: initial;
+		width: 100%;
+		.icon {
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+			&::after {
+				@include arrow( 'bottom', $tab-label-selected-font-color, 6px );
+			}
+		}
+		&[data-active='no'] {
+			background: $tab-label-background-color;
+			border: 1px solid $tab-label-border-color;
+			color: $tab-label-font-color;
+			cursor: pointer;
+			.icon {
+				&::after {
+					@include arrow( 'bottom', $tab-label-font-color, 6px );
+				}
+			}
+		}
+	}
+	.section-panel {
+		@extend .clearfix;
+		margin: 0 0 -1px 0;
+		padding: 20px;
+		&[data-active='yes'] {
+			border-top: 0;
+		}
+	}
+}

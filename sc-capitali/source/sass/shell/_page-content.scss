@@ -1,0 +1,143 @@
+
+// Content
+// -----------------------------------------------------------------------------
+
+$content-desktop-padding: 50px;
+$content-mobile-padding: 30px;
+
+#page-content {
+  padding:$content-mobile-padding 0;
+  @media #{$md-up} {
+    padding:$content-desktop-padding 0;
+  }
+
+  .page-template-landing-page & {
+    padding: #{ $content-mobile-padding + 50 }  0;
+    @media #{$md-up} {
+      padding: #{  $content-desktop-padding + 50 } 0;
+    }
+  }
+}
+
+.post-content .single_job_listing {
+  display: none;
+}
+
+.single-job_listing  {
+  .post-content .single_job_listing {
+    display: block;
+  }
+  
+  div#page-banner
+  {
+    display: none!important;
+  }
+  .col-12.col-md-3
+  {
+    display: none;
+  }
+  .col-12.col-md-9
+  {
+    width: 100%;
+    max-width: 100%;
+    flex: 100%;
+  }
+  .meta .full-time
+  {
+    background-color: $secondary-color!important;
+  }
+  input.application_button.button {
+    border-radius: 50px;
+    font-size: 15px!important;
+  }
+  .meta li
+  {
+    color: $primary-color;
+  }
+  .company
+  {
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    img
+    {
+      background-color: #d5d5d5;
+      object-fit: contain;
+    }
+  }
+}
+
+form.job_filters {
+  background: #ffffff;
+  .search_jobs
+  {
+    display: none;
+  }
+  .search_keywords {
+    padding-right: 15px;
+  }
+  .search_location, .search_keywords 
+  {
+    width: 50%;
+    float: left;
+    margin-bottom: 10px;
+    label
+    {
+      width:100%;
+    }
+    input[type='text']
+    {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border: 1px solid $neutral-5;
+      border-radius: 0;
+      color: $primary-color;
+      font-display: inherit;
+      font-size: 1.5rem;
+      height: 48px;
+      line-height: 1.5rem;
+      letter-spacing: .025em;
+      padding: 0 10px;
+      width: 100%;
+    }
+  }
+  ul.job_types 
+  {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    background: #ffffff;
+    border-top: 1px solid #ffffff;
+    li {
+      display: inline;
+      padding-left: 0;
+      padding-right: 12px;
+      margin-bottom: 5px;
+      
+    }
+    li:before{
+      content: none!important;
+    }
+  
+  }
+}
+ul.job_listings li:before {
+  content: none;
+}
+ul.job_listings li.job_listing a img.company_logo
+{left: 0em;}
+ul.job_listings li.job_listing a img.company_logo
+{
+  object-fit: contain;
+}
+.job_listings a.rss_link
+{
+  display: none;
+}
+.company strong {
+  color: #4d4d4d;     font-weight: 500!important;
+}
+.company {
+  font-size: 1.4rem;
+}
+.job_filters .job_types li
+{border-right:none!important;}

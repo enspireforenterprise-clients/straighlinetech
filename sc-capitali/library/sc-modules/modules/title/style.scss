@@ -1,0 +1,95 @@
+
+// Title Module
+// -----------------------------------------------------------------------------
+
+.scm-title {
+	margin: 0 0 #{$module-bottom-margin / 2} 0;
+	@media #{$md-up} {
+		margin: 0 0 #{$module-bottom-margin-md-up / 2} 0;
+	}
+}
+
+.sc-heading {
+	margin: 0 0 20px 0;
+	&__title {
+		font-size: 1.5rem;
+	}
+	&__sub-title {
+		font-family: $secondary-font-family;
+		font-size: 1.3rem;
+		text-transform: uppercase;
+		margin-top: -10px;
+		letter-spacing: 0.050em;
+	}
+	&__overline {
+		font-family: $secondary-font-family;
+		font-size: 1.3rem;
+		letter-spacing: 0.050em;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+	}
+	&--align-center {
+		text-align: center;
+	}
+	&--align-right {
+		text-align: right;
+	}
+	&--align-left {
+		text-align: left;
+	}
+} 
+
+.sc-heading--size-xsmall {
+	.sc-heading__title {
+		@extend h6;
+	}
+}
+
+.sc-heading--size-small {
+	.sc-heading__title {
+		@extend h5;
+	}
+}
+
+.sc-heading--size-medium {
+	.sc-heading__title {
+		@extend h4;
+	}
+}
+
+.sc-heading--size-large {
+	.sc-heading__title {
+		@extend h3;
+	}
+}
+
+.sc-heading--size-xlarge {
+	.sc-heading__title {
+		@extend h2;
+	}
+}
+
+.sc-heading--substyle-italic {
+	.sc-heading__overline {
+		font-style: italic;
+	}
+	.sc-heading__sub-title {
+		font-style: italic;
+	}
+}
+
+.sc-heading--substyle-bold {
+	.sc-heading__overline {
+		font-weight: 500;
+	}
+	.sc-heading__sub-title {
+		font-weight: 500;
+	}
+}
+
+.sc-heading--separator-true {
+	border-bottom: 1px solid $border-color;
+}
+.sc-heading--size-small h2 {
+    color: $primary-color!important;
+}

@@ -1,0 +1,115 @@
+
+// Sidebar Nav Widget
+// -----------------------------------------------------------------------------
+
+.widget-sc-widget-sidebar-nav { 
+	.menu,
+	.sub-menu {
+		list-style: none;
+		a {
+			display: block;
+			position: relative;
+			text-decoration: none;
+			@include hover() {
+				text-decoration: none;
+				span::after {
+					width: 100%;
+				}
+			}
+			span {
+				position: relative;
+				&::after {
+					background: $primary-font-color;
+					bottom: -2px;
+					content: '';
+					display: block;
+					height: 1px;
+					left: 0;
+					position: absolute;
+					transition: width $transition-fast ease;
+					width: 0%;
+				}
+			}
+		}
+  }
+	.menu-item[data-level='2'] {
+		border-bottom: 1px solid $border-color;
+		&.expanded-menu-item {
+      padding: 0 0 5px 0;
+			> a {
+				&::after {
+					right: 2px;
+					transform: rotate(90deg);
+				}
+			}
+		}
+		&.current-menu-item {
+			> a {
+				color: $primary-color;
+				cursor: default;
+			}
+		}
+		> a {
+			color: $primary-font-color;
+			padding: 10px 0;
+			font-size: 1.6rem;
+			font-weight: 700;
+			&::after {
+				@include arrow('right', $secondary-color, 6px);
+				position: absolute;
+				right: 0;
+				top: 16px;
+			}
+    }
+    &:not(.has-children) {
+      > a {
+        &::after {
+          display: none;
+        }
+      }
+    }
+	}
+	.menu-item[data-level='3'] {
+		padding: 0 0 0 15px;
+		&.current-menu-item {
+			> a {
+				font-weight: 600;
+			}
+		}
+		&:last-child {
+			margin: 0 0 10px 0;
+		}
+		> a {
+			border: 0;
+			color: $link-color;
+			font-weight: 400;
+			padding: 3px 0;
+		}
+	}
+	// .menu-item[data-level='4'] {
+	// 	&.current-menu-item {
+	// 		> a {
+	// 			font-weight: 700;
+	// 		}
+	// 	}
+	// 	> a {
+	// 		color: $link-color;
+	// 		font-weight: 400;
+	// 		padding: 5px 0 5px 15px;
+	// 		&::before {
+  //       content: '-';
+  //       display: inline-block;
+	// 			margin: 0 5px 0 0;
+	// 		}
+	// 	}
+	// 	.sub-menu {
+	// 		display: none;
+	// 	}
+	// }
+}
+div#custom_html-2 {
+    margin-bottom: 0;
+}
+div#sc-widget-sidebar-nav-2 h4.sc-widget-title {
+    display: none;
+}

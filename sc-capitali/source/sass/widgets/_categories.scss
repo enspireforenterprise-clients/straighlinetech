@@ -1,0 +1,25 @@
+
+// Categories Widget
+// -----------------------------------------------------------------------------
+
+.widget_categories {
+	ul {
+		li.cat-item {
+			border-bottom: 1px solid $border-color;
+			> a {
+				color: $primary-font-color;
+				padding: 10px 0;
+				font-size: 1.6rem;
+				font-weight: 500;
+				display: block
+			}
+			&:not(.has-children) {
+				> a {
+					&::after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

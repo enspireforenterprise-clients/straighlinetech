@@ -1,0 +1,113 @@
+// Image Module
+// -----------------------------------------------------------------------------
+
+.scm-video {
+	.sc-card {
+		&__media {
+			@include aspect-ratio(16, 9, '.scm-video__container');
+		}
+		&__content {
+			@media #{$md-up} {
+				margin: -55px 0 0 15px;
+			}
+			@media #{$lg-up} {
+				margin: -55px 0 0 20px;
+			}
+		}
+	}
+	&__container {
+		background: $neutral-3;
+		position: relative;
+		width: 100%;
+	}
+	&__button {
+		align-items: center;
+		background: rgba(#fff, 0);
+		border: 0;
+		display: flex;
+		height: 100%;
+		justify-content: center;
+		left: 0;
+		position: absolute;
+		top: 0;
+		transition: background $transition-fast ease;
+		width: 100%;
+		z-index: 3;
+		* {
+			pointer-events: none;
+		}
+		&__text {
+			@extend .sr-only;
+		}
+		&__icon {
+			align-items: center;
+			display: flex;
+			justify-content: center;
+			height: 115px;
+			width: 115px;
+			position: relative;
+			&::before {
+				background: #fff;
+				border: 1px solid #fff;
+				border-radius: 50%;
+				content: '';
+				display: block;
+				height: 115px;
+				left: 0;
+				position: absolute;
+				top: 0;
+				transition: transform $transition-fast ease;
+				transform: scale(1);
+				transform-origin: center center;
+				width: 115px;
+			}
+			&::after {
+				@include arrow(right, $primary-font-color, 20px);
+				transform: scaleY(0.75) translateX(2px);
+			}
+		}
+		@include hover() {
+			background: rgba(#000, 0.25);
+			cursor: pointer;
+			.scm-video__button__icon::before {
+				transform: scale(1.1);
+			}
+		}
+	}
+	&__cover {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		bottom: 0;
+		display: block;
+		height: 100%;
+		left: 0;
+		opacity: 1;
+		position: absolute;
+		right: 0;
+		top: 0;
+		transition: opacity 300ms ease;
+		width: 100%;
+		z-index: 2;
+		&--lazy-load {
+			opacity: 0;
+		}
+	}
+	&__player {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+		iframe {
+			height: 100%;
+			width: 100%;
+		}
+	}
+	.wp-video,
+	.wp-video video {
+		height: 100% !important;
+		width: 100% !important;
+	}
+}

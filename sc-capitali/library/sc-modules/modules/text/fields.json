@@ -1,0 +1,30 @@
+{
+	"key": "scm_text",
+	"name": "text",
+	"label": "Text",
+	"display": "block",
+	"sub_fields": [
+		{
+			"key": "scm_text_body",
+			"label": "Body",
+			"name": "body",
+			"type": "wysiwyg",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"tabs": "all",
+			"toolbar": "full",
+      "media_upload": 1,
+      "searchable": 1,
+      "excerpt": 1
+		}
+	],
+	"min": "",
+	"max": ""
+}

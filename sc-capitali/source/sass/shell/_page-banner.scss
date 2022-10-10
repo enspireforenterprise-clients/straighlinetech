@@ -1,0 +1,105 @@
+
+// Page Banner
+// -----------------------------------------------------------------------------
+
+.page-banner {
+
+	@media #{$lg-up} {
+		border-bottom: 1px solid $border-color;
+	}
+	&__image-container {
+		background: $neutral-6;
+		background-image: url('assets/images/default-interior-banner.jpg');
+		background-position: center top;
+		background-size: cover;
+		background-repeat: no-repeat;
+		
+		height: 130px;
+		position: relative;
+		@media #{$sm-up} {
+			height: 200px;
+		}
+		@media #{$md-up} {
+			height: 292px;
+		}
+		@media #{$lg-up} {
+			height: 292px;
+		}
+	}
+	.container-fluid {
+		padding: 0;
+		overflow-x: hidden;
+		.row {
+			flex-direction: row-reverse;
+		}
+
+	}
+	&__intro {
+		color: $primary-font-color;
+		font-family: $secondary-font-family;
+		font-size: 1.2rem;
+		letter-spacing: .2em;
+		line-height: 2rem;
+		margin: 0 0 40px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	&__header {
+		animation-duration: 2s;
+		animation-name: page-banner-header-fade-in;
+		animation-timing-function: ease;
+	}
+	&__title {
+		color: $neutral-8;
+		display: inline-block;
+		@extend h1;
+
+		@media #{$xl-only}{
+			font-size: 5rem;
+		}
+		
+	}
+	&__sub-title {
+		@extend h6;
+	}
+	&__text {
+		padding: 0 15px;
+		margin: 40px auto 0 auto;
+
+		@media (min-width: 576px) and (max-width: 767px) {
+			max-width: 540px;
+		}
+
+		@media (min-width: 768px) and (max-width: 991px)  {
+			max-width: 720px;
+		}
+
+		@media #{$lg-up}{
+			margin: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+			padding: 0 120px;
+		}
+
+		@media #{$xl-only}{
+			padding: 0 70px;
+		}
+	}
+}
+
+@keyframes page-banner-header-fade-in {
+  0% {
+		filter: blur(5px);
+		opacity: 0;
+	}
+	20% {
+		filter: blur(5px);
+		opacity: 0;
+  }
+  100% {
+		filter: blur(0px);
+		opacity: 1;
+  }
+}

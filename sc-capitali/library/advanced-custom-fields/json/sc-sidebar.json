@@ -1,0 +1,54 @@
+{
+	"key": "sc_widgets",
+	"title": "Widgets",
+	"fields": [
+		{
+			"key": "sc_sidebar",
+			"label": "Sidebar",
+			"name": "custom_sidebar",
+			"type": "select",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+					"width": "",
+					"class": "",
+					"id": ""
+			},
+			"choices": {
+				"Default Sidebar": "Default Sidebar"
+			},
+			"default_value": [],
+			"allow_null": 0,
+			"multiple": 0,
+			"ui": 0,
+			"return_format": "value",
+			"ajax": 0,
+			"placeholder": ""
+	}
+	],
+	"location": [
+		[
+			{
+				"param": "page_template",
+				"operator": "==",
+				"value": "sidebar.php"
+			}
+		],
+		[
+			{
+				"param": "page_template",
+				"operator": "==",
+				"value": "landing-page-sidebar.php"
+			}
+		]
+	],
+	"menu_order": 0,
+	"position": "side",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": [],
+	"active": 1,
+	"description": ""
+}

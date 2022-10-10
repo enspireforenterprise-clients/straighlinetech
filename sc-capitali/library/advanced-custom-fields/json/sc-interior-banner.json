@@ -1,0 +1,750 @@
+{
+	"key": "sc_interior_banner",
+	"title": "Interior Banner",
+	"fields": [
+		{
+			"key": "sc_interior_banner_title",
+			"label": "Title",
+			"name": "interior_banner_title",
+			"type": "text",
+			"value": null,
+			"instructions": "Optionally override the default page title",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"maxlength": ""
+		},
+		{
+			"key": "sc_interior_banner_sub_title",
+			"label": "Sub Title",
+			"name": "interior_banner_sub_title",
+			"type": "text",
+			"value": null,
+			"instructions": "Optional include a page sub title",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"maxlength": ""
+		},
+		{
+			"key": "sc_interior_banner_hidden",
+			"label": "Banner Visibility",
+			"name": "interior_banner_hidden",
+			"type": "true_false",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"message": "Hide the banner from view on this page",
+			"default_value": 0,
+			"ui": 1,
+			"ui_on_text": "",
+			"ui_off_text": ""
+		},
+		{
+			"key": "sc_interior_banner_hg",
+			"label": "HG Image",
+			"name": "",
+			"type": "tab",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"placement": "top",
+			"endpoint": 0
+		},
+		{
+			"key": "sc_interior_banner_hg_image",
+			"label": "Image",
+			"name": "hg_image",
+			"type": "image",
+			"instructions": "Minimum dimensions: 1000 x 292",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50%",
+				"class": "",
+				"id": ""
+			},
+			"return_format": "array",
+			"preview_size": "hero-hg-up",
+			"library": "all",
+			"min_width": 1000,
+			"min_height": 292,
+			"min_size": "",
+			"max_width": "",
+			"max_height": "",
+			"max_size": 1,
+			"mime_types": ""
+		},
+		{
+			"key": "sc_interior_banner_hg_alignment",
+			"label": "Alignment",
+			"name": "hg_alignment",
+			"type": "group",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50%",
+				"class": "",
+				"id": ""
+			},
+			"min": 1,
+			"max": "",
+			"layout": "block",
+			"sub_fields": [
+				{
+					"key": "sc_interior_banner_hg_alignment_v",
+					"label": "Vertical",
+					"name": "vertical",
+					"type": "radio",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"choices": {
+						"top": "Top",
+						"center": "Center",
+						"bottom": "Bottom"
+					},
+					"allow_null": 1,
+					"other_choice": 0,
+					"save_other_choice": 0,
+					"default_value": "",
+					"layout": "horizontal",
+					"return_format": "value"
+				},
+				{
+					"key": "sc_interior_banner_hg_alignment_h",
+					"label": "Horizontal",
+					"name": "horizontal",
+					"type": "radio",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"choices": {
+						"left": "Left",
+						"center": "Center",
+						"right": "Right"
+					},
+					"allow_null": 1,
+					"other_choice": 0,
+					"save_other_choice": 0,
+					"default_value": "",
+					"layout": "horizontal",
+					"return_format": "value"
+				}
+			]
+		},
+		{
+			"key": "sc_interior_banner_xl",
+			"label": "XL Image",
+			"name": "",
+			"type": "tab",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"placement": "top",
+			"endpoint": 0
+		},
+		{
+			"key": "sc_interior_banner_xl_image",
+			"label": "Image",
+			"name": "xl_image",
+			"type": "image",
+			"instructions": "Minimum dimensions: 900 x 292",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50%",
+				"class": "",
+				"id": ""
+			},
+			"return_format": "array",
+			"preview_size": "hero-xl-up",
+			"library": "all",
+			"min_width": 300,
+			"min_height": 292,
+			"min_size": "",
+			"max_width": "",
+			"max_height": "",
+			"max_size": 1,
+			"mime_types": ""
+		},
+		{
+			"key": "sc_interior_banner_xl_alignment",
+			"label": "Alignment",
+			"name": "xl_alignment",
+			"type": "group",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50%",
+				"class": "",
+				"id": ""
+			},
+			"min": 1,
+			"max": "",
+			"layout": "block",
+			"sub_fields": [
+				{
+					"key": "sc_interior_banner_xl_alignment_v",
+					"label": "Vertical",
+					"name": "vertical",
+					"type": "radio",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"choices": {
+						"top": "Top",
+						"center": "Center",
+						"bottom": "Bottom"
+					},
+					"allow_null": 1,
+					"other_choice": 0,
+					"save_other_choice": 0,
+					"default_value": "",
+					"layout": "horizontal",
+					"return_format": "value"
+				},
+				{
+					"key": "sc_interior_banner_xl_alignment_h",
+					"label": "Horizontal",
+					"name": "horizontal",
+					"type": "radio",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"choices": {
+						"left": "Left",
+						"center": "Center",
+						"right": "Right"
+					},
+					"allow_null": 1,
+					"other_choice": 0,
+					"save_other_choice": 0,
+					"default_value": "",
+					"layout": "horizontal",
+					"return_format": "value"
+				}
+			]
+		},
+		{
+			"key": "sc_interior_banner_lg",
+			"label": "LG Image",
+			"name": "",
+			"type": "tab",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"placement": "top",
+			"endpoint": 0
+		},
+		{
+			"key": "sc_interior_banner_lg_image",
+			"label": "Image",
+			"name": "lg_image",
+			"type": "image",
+			"instructions": "Minimum dimensions: 800 x 292",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50%",
+				"class": "",
+				"id": ""
+			},
+			"return_format": "array",
+			"preview_size": "hero-lg-up",
+			"library": "all",
+			"min_width": 800,
+			"min_height": 292,
+			"min_size": "",
+			"max_width": "",
+			"max_height": "",
+			"max_size": 1,
+			"mime_types": ""
+		},
+		{
+			"key": "sc_interior_banner_lg_alignment",
+			"label": "Alignment",
+			"name": "lg_alignment",
+			"type": "group",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50%",
+				"class": "",
+				"id": ""
+			},
+			"min": 1,
+			"max": "",
+			"layout": "block",
+			"sub_fields": [
+				{
+					"key": "sc_interior_banner_lg_alignment_v",
+					"label": "Vertical",
+					"name": "vertical",
+					"type": "radio",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"choices": {
+						"top": "Top",
+						"center": "Center",
+						"bottom": "Bottom"
+					},
+					"allow_null": 1,
+					"other_choice": 0,
+					"save_other_choice": 0,
+					"default_value": "",
+					"layout": "horizontal",
+					"return_format": "value"
+				},
+				{
+					"key": "sc_interior_banner_lg_alignment_h",
+					"label": "Horizontal",
+					"name": "horizontal",
+					"type": "radio",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"choices": {
+						"left": "Left",
+						"center": "Center",
+						"right": "Right"
+					},
+					"allow_null": 1,
+					"other_choice": 0,
+					"save_other_choice": 0,
+					"default_value": "",
+					"layout": "horizontal",
+					"return_format": "value"
+				}
+			]
+		},
+		{
+			"key": "sc_interior_banner_md",
+			"label": "MD Image",
+			"name": "",
+			"type": "tab",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"placement": "top",
+			"endpoint": 0
+		},
+		{
+			"key": "sc_interior_banner_md_image",
+			"label": "Image",
+			"name": "md_image",
+			"type": "image",
+			"instructions": "Minimum dimensions: 700 x 292",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50%",
+				"class": "",
+				"id": ""
+			},
+			"return_format": "array",
+			"preview_size": "hero-md-up",
+			"library": "all",
+			"min_width": 700,
+			"min_height": 292,
+			"min_size": "",
+			"max_width": "",
+			"max_height": "",
+			"max_size": 1,
+			"mime_types": ""
+		},
+		{
+			"key": "sc_interior_banner_md_alignment",
+			"label": "Alignment",
+			"name": "md_alignment",
+			"type": "group",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50%",
+				"class": "",
+				"id": ""
+			},
+			"min": 1,
+			"max": "",
+			"layout": "block",
+			"sub_fields": [
+				{
+					"key": "sc_interior_banner_md_alignment_v",
+					"label": "Vertical",
+					"name": "vertical",
+					"type": "radio",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"choices": {
+						"top": "Top",
+						"center": "Center",
+						"bottom": "Bottom"
+					},
+					"allow_null": 1,
+					"other_choice": 0,
+					"save_other_choice": 0,
+					"default_value": "",
+					"layout": "horizontal",
+					"return_format": "value"
+				},
+				{
+					"key": "sc_interior_banner_md_alignment_h",
+					"label": "Horizontal",
+					"name": "horizontal",
+					"type": "radio",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"choices": {
+						"left": "Left",
+						"center": "Center",
+						"right": "Right"
+					},
+					"allow_null": 1,
+					"other_choice": 0,
+					"save_other_choice": 0,
+					"default_value": "",
+					"layout": "horizontal",
+					"return_format": "value"
+				}
+			]
+		},
+		{
+			"key": "sc_interior_banner_sm",
+			"label": "SM Image",
+			"name": "",
+			"type": "tab",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"placement": "top",
+			"endpoint": 0
+		},
+		{
+			"key": "sc_interior_banner_sm_image",
+			"label": "Image",
+			"name": "sm_image",
+			"type": "image",
+			"instructions": "Minimum dimensions: 600 x 260",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50%",
+				"class": "",
+				"id": ""
+			},
+			"return_format": "array",
+			"preview_size": "hero-sm-up",
+			"library": "all",
+			"min_width": 600,
+			"min_height": 260,
+			"min_size": "",
+			"max_width": "",
+			"max_height": "",
+			"max_size": 1,
+			"mime_types": ""
+		},
+		{
+			"key": "sc_interior_banner_sm_alignment",
+			"label": "Alignment",
+			"name": "sm_alignment",
+			"type": "group",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50%",
+				"class": "",
+				"id": ""
+			},
+			"min": 1,
+			"max": "",
+			"layout": "block",
+			"sub_fields": [
+				{
+					"key": "sc_interior_banner_sm_alignment_v",
+					"label": "Vertical",
+					"name": "vertical",
+					"type": "radio",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"choices": {
+						"top": "Top",
+						"center": "Center",
+						"bottom": "Bottom"
+					},
+					"allow_null": 1,
+					"other_choice": 0,
+					"save_other_choice": 0,
+					"default_value": "",
+					"layout": "horizontal",
+					"return_format": "value"
+				},
+				{
+					"key": "sc_interior_banner_sm_alignment_h",
+					"label": "Horizontal",
+					"name": "horizontal",
+					"type": "radio",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"choices": {
+						"left": "Left",
+						"center": "Center",
+						"right": "Right"
+					},
+					"allow_null": 1,
+					"other_choice": 0,
+					"save_other_choice": 0,
+					"default_value": "",
+					"layout": "horizontal",
+					"return_format": "value"
+				}
+			]
+		},
+		{
+			"key": "sc_interior_banner_xs",
+			"label": "XS Image",
+			"name": "",
+			"type": "tab",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"placement": "top",
+			"endpoint": 0
+		},
+		{
+			"key": "sc_interior_banner_xs_image",
+			"label": "Image",
+			"name": "xs_image",
+			"type": "image",
+			"instructions": "Minimum dimensions: 767 x 160",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50%",
+				"class": "",
+				"id": ""
+			},
+			"return_format": "array",
+			"preview_size": "hero-xs-up",
+			"library": "all",
+			"min_width": 767,
+			"min_height": 160,
+			"min_size": "",
+			"max_width": "",
+			"max_height": "",
+			"max_size": 1,
+			"mime_types": ""
+		},
+		{
+			"key": "sc_interior_banner_xs_alignment",
+			"label": "Alignment",
+			"name": "xs_alignment",
+			"type": "group",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50%",
+				"class": "",
+				"id": ""
+			},
+			"min": 1,
+			"max": "",
+			"layout": "block",
+			"sub_fields": [
+				{
+					"key": "sc_interior_banner_xs_alignment_v",
+					"label": "Vertical",
+					"name": "vertical",
+					"type": "radio",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"choices": {
+						"top": "Top",
+						"center": "Center",
+						"bottom": "Bottom"
+					},
+					"allow_null": 1,
+					"other_choice": 0,
+					"save_other_choice": 0,
+					"default_value": "",
+					"layout": "horizontal",
+					"return_format": "value"
+				},
+				{
+					"key": "sc_interior_banner_xs_alignment_h",
+					"label": "Horizontal",
+					"name": "horizontal",
+					"type": "radio",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"choices": {
+						"left": "Left",
+						"center": "Center",
+						"right": "Right"
+					},
+					"allow_null": 1,
+					"other_choice": 0,
+					"save_other_choice": 0,
+					"default_value": "",
+					"layout": "horizontal",
+					"return_format": "value"
+				}
+			]
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "post_type",
+				"operator": "==",
+				"value": "page"
+			},
+			{
+				"param": "page_type",
+				"operator": "!=",
+				"value": "front_page"
+			}
+		],
+		[
+			{
+				"param": "post_type",
+				"operator": "==",
+				"value": "post"
+			}
+		]
+	],
+	"menu_order": 0,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": [
+		"the_content"
+	],
+	"active": 1,
+	"description": ""
+}

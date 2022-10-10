@@ -1,0 +1,91 @@
+
+// Breakpoints
+// ====================================================
+
+$screen    : "only screen" !default;
+$landscape : "#{$screen} and (orientation: landscape)" !default;
+$portrait  : "#{$screen} and (orientation: portrait)" !default;
+
+$xs-min    : 0px !default;
+$xs-max    : 575px !default;
+$sm-min    : 576px !default;
+$sm-max    : 767px !default;
+$md-min    : 768px !default;
+$md-max    : 991px !default;
+$lg-min    : 992px !default;
+$lg-max    : 1199px !default;
+$xl-min    : 1200px !default;
+$xl-max    : 1599px !default;
+$hg-min    : 1600px !default;
+$hg-max    : 99999999px !default;
+
+$xs-range  : ($xs-min, $xs-max) !default;
+$sm-range  : ($sm-min, $sm-max) !default;
+$md-range  : ($md-min, $md-max) !default;
+$lg-range  : ($lg-min, $lg-max) !default;
+$xl-range  : ($xl-min, $xl-max) !default;
+$hg-range  : ($hg-min, $hg-max) !default;
+
+$xs-up     : "#{$screen} and (min-width:#{lower-bound($xs-range)})" !default;
+$xs-only   : "#{$screen} and (min-width:#{lower-bound($xs-range)}) and (max-width:#{upper-bound($xs-range)})" !default;
+$sm-up     : "#{$screen} and (min-width:#{lower-bound($sm-range)})" !default;
+$sm-only   : "#{$screen} and (min-width:#{lower-bound($sm-range)}) and (max-width:#{upper-bound($sm-range)})" !default;
+$md-up     : "#{$screen} and (min-width:#{lower-bound($md-range)})" !default;
+$md-only   : "#{$screen} and (min-width:#{lower-bound($md-range)}) and (max-width:#{upper-bound($md-range)})" !default;
+$lg-up     : "#{$screen} and (min-width:#{lower-bound($lg-range)})" !default;
+$lg-only   : "#{$screen} and (min-width:#{lower-bound($lg-range)}) and (max-width:#{upper-bound($lg-range)})" !default;
+$xl-up     : "#{$screen} and (min-width:#{lower-bound($xl-range)})" !default;
+$xl-only   : "#{$screen} and (min-width:#{lower-bound($xl-range)}) and (max-width:#{upper-bound($xl-range)})" !default;
+$hg-up     : "#{$screen} and (min-width:#{lower-bound($hg-range)})" !default;
+$hg-only   : "#{$screen} and (min-width:#{lower-bound($hg-range)}) and (max-width:#{upper-bound($hg-range)})" !default;
+
+$retina    : (
+	"#{$screen} and (-webkit-min-device-pixel-ratio: 2)",
+	"#{$screen} and (min--moz-device-pixel-ratio: 2)",
+	"#{$screen} and (-o-min-device-pixel-ratio: 2/1)",
+	"#{$screen} and (min-device-pixel-ratio: 2)",
+	"#{$screen} and (min-resolution: 192dpi)",
+	"#{$screen} and (min-resolution: 2dppx)"
+) !default;
+
+// Media Query Order
+// ====================================================
+
+.media-query-order {
+	@media #{$xs-up} {
+		width:100%;
+	}
+	@media #{$sm-up} {
+		width:100%;
+	}
+	@media #{$md-up} {
+		width:100%;
+	}
+	@media #{$lg-up} {
+		width:100%;
+	}
+	@media #{$xl-up} {
+		width:100%;
+	}
+	@media #{$hg-up} {
+		width:100%;
+	}
+	@media #{$xs-only} {
+		width:100%;
+	}
+	@media #{$sm-only} {
+		width:100%;
+	}
+	@media #{$md-only} {
+		width:100%;
+	}
+	@media #{$lg-only} {
+		width:100%;
+	}
+	@media #{$xl-only} {
+		width:100%;
+	}
+	@media #{$hg-only} {
+		width:100%;
+	}
+}

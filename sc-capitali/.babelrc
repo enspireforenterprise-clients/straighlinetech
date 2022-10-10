@@ -1,0 +1,13 @@
+{
+	"presets": [
+		[
+			"@babel/preset-env", 
+			{
+				"debug": false,
+				"useBuiltIns": "usage", // or "entry"
+				"corejs": "3.6.4"
+			}
+		]
+	],
+	"plugins": ["import-glob"]
+}

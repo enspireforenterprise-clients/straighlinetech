@@ -1,0 +1,118 @@
+
+// Slick Theme
+// -----------------------------------------------------------------------------
+
+$slick-arrow-size: 50px;
+
+$slick-dot-background-color:        #d6d6d6;
+$slick-dot-background-color-active: $primary-color;
+$slick-dot-background-color-hover:  $primary-color;
+
+$slick-dot-border-color:        #d6d6d6;
+$slick-dot-border-color-active: $primary-color;
+$slick-dot-border-color-hover:  $primary-color;
+
+$slick-dot-border-width: 1px;
+$slick-dot-click-height: 20px;
+$slick-dot-click-width:  20px;
+$slick-dot-visible-size: 12px;
+
+// General
+// -----------------------------------------------------------------------------
+
+.slick-list {
+	.slick-loading & {
+		opacity: 0;
+	}
+}
+
+.slick-slide {
+	outline: none;
+}
+
+// Arrows
+// -----------------------------------------------------------------------------
+
+.slick-arrow {
+	align-items: center;
+	background: #fff url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2217%22%20height%3D%2210%22%20viewBox%3D%220%200%2017%2010%22%3E%0A%20%20%3Ctitle%3EArrow%20Icon%3C%2Ftitle%3E%0A%20%20%3Cpath%20fill%3D%22%525050cd%22%20d%3D%22M17%2C5.2a.48.48%2C0%2C0%2C0-.47-.69H1.79L5.23.85A.52.52%2C0%2C0%2C0%2C5.37.43.51.51%2C0%2C0%2C0%2C5.15.07a.44.44%2C0%2C0%2C0-.57.08L0%2C5%2C4.54%2C9.81a.67.67%2C0%2C0%2C0%2C.24.17l.09%2C0H5a.45.45%2C0%2C0%2C0%2C.37-.35.45.45%2C0%2C0%2C0-.13-.49L1.82%2C5.49H16.43l.21%2C0A.42.42%2C0%2C0%2C0%2C17%2C5.2Z%22%2F%3E%0A%3C%2Fsvg%3E') no-repeat center center;
+	background-size: 17px 10px;
+	border: 1px solid #525050;
+	border-radius: 50%;
+	bottom: initial;
+	display: block;
+	font-size: 0;
+	height: $slick-arrow-size;
+	justify-content: center;
+	overflow: hidden;
+	position: absolute;
+	top: calc(100% + 9px);
+	transform: translate(0, -50%);
+	width: $slick-arrow-size;
+	z-index: 1;
+}
+.slick-prev {
+	left: 20px;
+}
+.slick-next {
+	left: 20px + $slick-arrow-size - 1;
+	transform-origin: top;
+	transform: rotate(180deg) translate(0, -50%);
+}
+
+// Dots
+// -----------------------------------------------------------------------------
+
+.slick-dots {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0 0 20px 0;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: calc(100% + 22px);
+	width: auto;
+	li {
+		cursor: pointer;
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		button {
+			align-items: center;
+			background: transparent;
+			border: 0;
+			color: transparent;
+			cursor: pointer;
+			display: flex;
+			font-size: 0px;
+			height: $slick-dot-click-height;
+			justify-content: center;
+			line-height: 0px;
+			padding: 0;
+			width: $slick-dot-click-width;
+			@include hover() {
+				&::before {
+					background: $slick-dot-background-color-hover !important;
+					border-color: $slick-dot-border-color-hover !important;
+				}
+			}
+			&::before {
+				background: $slick-dot-background-color;
+				border: $slick-dot-border-width solid $slick-dot-border-color;
+				border-radius: 50%;
+				content: '';
+				display: block;
+				font-size: 0;
+				height: $slick-dot-visible-size;
+				width: $slick-dot-visible-size;
+				transition: background 500ms ease;
+			}
+		}
+		&.slick-active button::before {
+			background: $slick-dot-background-color-active;
+			border-color: $slick-dot-border-color-active;
+		}
+	}
+}

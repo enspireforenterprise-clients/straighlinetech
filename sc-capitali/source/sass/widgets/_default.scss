@@ -1,0 +1,28 @@
+
+// Default Widget
+// -----------------------------------------------------------------------------
+
+.sc-widget {
+	margin: 0 0 55px 0;
+	&-title {
+		margin: 0 0 10px 0;
+		font-weight: 500;
+		font-size: 2.2rem;
+		text-transform: none;
+		letter-spacing: 0;
+	}
+	ul,
+	li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.home {
+	.sc-widget {
+		&-title {
+			font-size: 2.6rem;
+		}
+	}
+}

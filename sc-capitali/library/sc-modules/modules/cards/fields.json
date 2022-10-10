@@ -1,0 +1,130 @@
+{
+  "key": "scm_cards",
+  "label": "Cards",
+  "name": "cards",
+  "display": "block",
+  "sub_fields": [
+    {
+      "key": "scm_cards_row",
+      "label": "Select Column Size",
+      "name": "select_column_size",
+      "type": "select",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+      },
+      "choices": {
+          
+          "two-columns": "Two Columns",
+          "three-columns": "Three Columns",
+          "four-columns": "Four Columns"
+      },
+      "default_value": "two-columns",
+      "allow_null": 0,
+      "multiple": 0,
+      "ui": 0,
+      "return_format": "value",
+      "ajax": 0,
+      "placeholder": ""
+  },
+    
+    {
+      "key": "scm_cards_cards",
+      "label": "Cards",
+      "name": "cards",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "min": "",
+      "max": "",
+      "layout": "block",
+      "button_label": "Add Card",
+      "sub_fields": [
+      
+        {
+          "key": "scm_cards_meta",
+          "label": "",
+          "name": "meta",
+          "type": "group",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "100%",
+            "class": "",
+            "id": ""
+          },
+          "min": 1,
+          "max": "",
+          "layout": "row",
+          "sub_fields": [
+            
+            
+            
+            
+            {
+              "key": "scm_cards_card_description",
+              "label": "Text Area",
+              "name": "description",
+              "type": "wysiwyg",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "",
+              "placeholder": "",
+              "prepend": "",
+              "append": "",
+              "maxlength": "",
+              "readonly": 0,
+              "disabled": 0
+            },
+            {
+              "key": "cm_cards_card_background",
+              "label": "Select Background Color",
+              "name": "select_card_background_color",
+              "type": "select",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                  "width": "",
+                  "class": "",
+                  "id": ""
+              },
+              "choices": {
+                  "primary-color": "Primary Color",
+                  "primary-color-light": "Primary Color Light",
+                  "secondary-color": "Secondary Color",
+                  "tertiary-color": "Tertiary Color"
+              },
+              "default_value": "primary-color",
+              "allow_null": 0,
+              "multiple": 0,
+              "ui": 0,
+              "return_format": "value",
+              "ajax": 0,
+              "placeholder": ""
+          }
+          ]
+        }
+      ]
+    }
+  ],
+  "min": "",
+  "max": ""
+}

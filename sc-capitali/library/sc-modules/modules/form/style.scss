@@ -1,0 +1,85 @@
+
+// Form Module
+// -----------------------------------------------------------------------------
+
+.gform {
+	&_wrapper {
+		position: relative;
+	}
+	&_fields {
+		@extend .row;
+		list-style: none;
+		margin-bottom: 0;
+		padding: 0;
+	}
+}
+
+.gfield {
+	@extend .sc-field;
+	@extend .col-12;
+	input[type='text'],
+	input[type='password'],
+	input[type='email'],
+	input[type='date'],
+	input[type='tel'],
+	textarea {
+		@extend .sc-field__input;
+	}
+	textarea {
+		@extend .sc-field__textarea;
+		height: initial;
+		&.small {
+			height: 100px;
+		}
+	}
+	select {
+		@extend .sc-field__select;
+	}
+	label {
+		@extend .sc-field__label;
+		font-weight: 400!important;
+	}
+	&.hidden_label {
+		.gfield_label {
+			@extend .sr-only;
+		}
+	}
+}
+
+.ginput_container {
+	@extend .sc-field__control;
+	&_select {
+		@extend .sc-field--select;
+		&::after {
+			@extend .sc-field--select::after;
+		}
+	}
+	&_checkbox,
+	&_radio,
+	&_consent {
+		ul,
+		li {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		input {
+			height: auto;
+			margin: 0 5px 0 0;
+			width: auto;
+		}
+		label {
+			display: inline;
+			font-family: $primary-font-family;
+			font-size: 1.5rem;
+			font-weight: normal;
+			line-height: 2.4rem;
+			letter-spacing: .025em;
+			text-transform: none;
+		}
+	}
+}
+
+.screen-reader-text {
+	@extend .sr-only;
+}

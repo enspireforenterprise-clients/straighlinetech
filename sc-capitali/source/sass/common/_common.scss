@@ -1,0 +1,452 @@
+
+// Hover Effects
+// -----------------------------------------------------------------------------
+
+button,
+input[type=submit],
+a {
+	transition: 
+		width $transition-fast ease, 
+		background-color $transition-fast ease, 
+		border-color $transition-fast ease, 
+		color $transition-fast ease, 
+		padding $transition-fast ease, 
+		margin $transition-fast ease;
+	svg {
+		* {
+			transition:fill $transition-fast ease;
+		}
+	}
+}
+
+// Clearfix
+// -----------------------------------------------------------------------------
+
+.clearfix {
+	@include clearfix();
+}
+
+// Screen Reader
+// -----------------------------------------------------------------------------
+
+.sr-only {
+	@include sr-only();
+}
+
+.sr-only-focusable {
+	@include sr-only-focusable();
+}
+
+// Modules
+// -----------------------------------------------------------------------------
+
+.sc-module {
+	margin: 0 auto #{$module-bottom-margin} auto;
+	@media #{$md-up} {
+		margin: 0 auto #{$module-bottom-margin-md-up} auto;
+	}
+	&--margin-bottom-mobile-large {
+		margin: 0 auto #{$module-bottom-margin--large} auto;
+	}
+	&--margin-bottom-desktop-large {
+		@media #{$lg-up} {
+			margin: 0 auto #{$module-bottom-margin-md-up--large} auto;
+		}
+	}
+	&--margin-bottom-mobile-none {
+		margin: 0 auto 0 auto;
+	}
+	&--margin-bottom-desktop-none {
+		@media #{$lg-up} {
+			margin: 0 auto 0 auto;
+		}
+	}
+}
+
+@media(min-width:992px)
+{
+
+	.sc-module--margin-bottom-desktop-small
+	{margin-bottom: 30px!important;}
+
+	.sc-module--margin-bottom-desktop-xlarge
+	{
+		margin-bottom: 120px!important;
+	}
+	
+} 
+
+@media(max-width:991px)
+{
+.sc-module--margin-bottom-mobile-small
+{
+	margin-bottom: 15px!important;
+}
+.sc-module--margin-bottom-mobile-medium
+{
+	margin-bottom: 30px!important;	
+}
+.sc-module--margin-bottom-mobile-large
+{
+	margin-bottom: 45px!important;	
+}
+.sc-module--margin-bottom-mobile-xlarge
+{
+	margin-bottom: 60px!important;
+}
+
+
+}
+	
+
+// Breadcrumb
+// -----------------------------------------------------------------------------
+
+.sc-breadcrumb {
+	color: $primary-color;
+	font-size: 1.2rem;
+	letter-spacing: .05em;
+	text-transform: uppercase;
+	a {
+		text-decoration: underline;
+	}
+}
+
+// Available At
+// -----------------------------------------------------------------------------
+
+.sc-available-at {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	font-family: $secondary-font-family;
+	font-size: 20px;
+	line-height: 1.2;
+	margin: 0 0 20px;
+	strong {
+		font-weight: 500;
+		margin: 0 10px 0 0;
+	}
+	svg {
+		fill: $primary-color;
+		margin: 0 10px 0 0;
+	}
+}
+
+// Blurred Backdrop
+// -----------------------------------------------------------------------------
+
+.sc-backdrop-blur {
+	background: #fff !important;
+	backdrop-filter: blur(10px) !important;
+	@supports not (backdrop-filter: blur(10px)) {
+		background: #fff !important;
+	}
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		background: #fff !important;
+	}
+}
+
+// Blurred Backdrop
+// -----------------------------------------------------------------------------
+
+.sc-hover-underline {
+	position: relative;
+	text-decoration: none;
+	@include hover() {
+		text-decoration: none;
+		&::after {
+			width: 100%;
+		}
+	}
+	&::after {
+		background: $primary-font-color;
+		bottom: 0; //-2px;
+		content: '';
+		display: block;
+		height: 1px;
+		left: 0;
+		position: absolute;
+		transition: width $transition-fast ease;
+		width: 0%;
+	}
+}
+
+// Social Icons
+// -----------------------------------------------------------------------------
+
+.sc-social-icons {
+	margin: 0 0 20px 0;
+	display: flex;
+	.sc-social-icon {
+		align-items: center;
+		border-radius: 5px;
+		display: flex;
+		height: 39px;
+		justify-content: center;
+		margin: 0 10px 0 0;
+		width: 39px;
+		svg {
+			display: block;
+			height: 22px;
+			width: 22px;
+			fill: $primary-color-light!important;
+		}
+		@include hover() {
+			svg {
+				fill: $secondary-color!important; 
+			}
+		}
+	}
+	&--dark {
+		.sc-social-icon {
+			svg {
+				fill: $neutral-8;
+			}
+		}
+	}
+}
+
+// Tags
+// -----------------------------------------------------------------------------
+
+.sc-tag {
+	display: flex;
+	flex-direction: column;
+	margin: 0 0 20px;
+	@media #{$md-up} {
+		flex-direction: row;
+	}
+	&__icon {
+		display: block;
+		height: 20px;
+		margin: 0 0 5px 0;
+		@media #{$md-up} {
+			display: inline-block;
+			margin: 0 5px 0 0;
+			transform: translateY(-4px);
+		}
+		svg {
+			display: block;
+			fill: $secondary-color;
+			height: 100%;
+		}
+		img {
+			display: block;
+			fill: $secondary-color;
+			height: 100%;
+			width: auto;
+		}
+	}
+	&__title {
+		@extend h5;
+		font-size: 1rem;
+		line-height: 1rem;
+		margin: 0;
+		@media #{$md-up} {
+			font-size: 1.6rem;
+			line-height: 1.6rem;
+		}
+	}
+	&__sub-title {
+		@extend h5;
+		margin: 0;
+	}
+}
+
+.sc-tag--large {
+	.sc-tag__title {
+		@extend h4;
+		margin: 0;
+	}
+	.sc-tag__icon {
+		@media #{$md-up} {
+			transform: translateY(-1px);
+		}
+	}
+}
+
+// Link Bar
+// -----------------------------------------------------------------------------
+
+.sc-link-bar {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 0 20px 0;
+	padding: 0;
+	&__item {
+		display: inline-block;
+		&:not(:last-child) {
+			margin: 0 10px 0 0;
+			padding: 0 10px 0 0;
+			position: relative;
+			&::after {
+				background: $neutral-5;
+				content: '';
+				display: block;
+				height: 10px;
+				position: absolute;
+				right: 0;
+				top: 8px;
+				width: 1px;
+			}
+		}
+	}
+	&__link {
+		@extend .sc-hover-underline;
+		color: $primary-font-color;
+		font-size: 1.3rem;
+		font-weight: 700;
+		letter-spacing: .125em;
+		text-transform: uppercase;
+		&--selected {
+			&::after {
+				width: 100%;
+			}
+		}
+	}
+}
+
+// Cards
+// -----------------------------------------------------------------------------
+
+.sc-card {
+	margin: 0 0 65px 0;
+	position: relative;
+	@media #{$md-up} {
+		padding: 0 0 10px 0;
+	}
+	.sc-heading {
+		margin: 0;
+	}
+	&__media {
+		width: 100%;
+		z-index: 1;
+		&--front {
+			z-index: 3;
+		}
+		&__image {
+			width: 100%;
+		}
+	}
+	&__content {
+		background: #fff;
+		padding: 20px 0 0;
+		position: relative;
+		width: 100%;
+		z-index: 2;
+		@media #{$md-up} {
+			margin: 0;
+			padding: 30px 0 0;
+			width: 100%;
+		}
+	}
+	&__header {
+		margin: 0 0 20px;
+	}
+	&__post-info {
+		@extend .sc-heading__sub-title;
+	}
+	&__description {
+		padding: 0 0 30px 0;
+		p {
+			margin: 0 0 20px 0;
+		}
+	}
+}
+
+
+// Pagination
+// -----------------------------------------------------------------------------
+.sc-pagination{
+	width: 100%;
+	border-top: 1px solid $neutral-5;
+	border-bottom: 1px solid $neutral-5;
+	display: flex;
+	padding: 15px 0;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	@media #{$lg-up}{
+		justify-content: space-between;
+		flex-direction: row;
+	}
+	.number-controls {
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		@media #{$lg-up}{
+			text-align: left;
+			justify-content: start;
+		}
+		span {
+			margin-right: 10px;
+		}
+		.nav-links {
+			.page-numbers:not(:last-child){
+				position: relative;
+				margin-right: 10px;
+				&::after {
+					content: '';
+					width: 1px;
+					height: 100%;
+					background: $primary-font-color;
+					position: absolute;
+					left: 12px;
+					height: 13px;
+					top: 3px;
+				}
+
+				&.dots {
+					margin-right: 5px;
+				}
+			}
+			.dots {
+				&:after {
+					display: none;
+				}
+			}
+			a {
+				color: $primary-font-color;
+			}
+		}
+	}
+	.page-controls {
+		a {
+			color: $primary-font-color;
+			display: inline-block;
+			font-size: 1.3rem;
+			font-weight: 600;
+			letter-spacing: .15em;
+			padding: 0 10px 0 0;
+			position: relative;
+			text-transform: uppercase;
+		}
+	}
+}
+
+
+// WP Media Alignment
+// -----------------------------------------------------------------------------
+
+.alignnone {
+	padding:0;
+}
+
+.alignleft {
+	float:left;
+	margin:0 40px 40px 0;
+	padding:0;
+}
+
+.aligncenter {
+	display:block;
+	margin:0 auto 40px auto;
+	padding:0;
+}
+
+.alignright {
+	float:right;
+	margin:0 0 40px 40px;
+	padding:0;
+}

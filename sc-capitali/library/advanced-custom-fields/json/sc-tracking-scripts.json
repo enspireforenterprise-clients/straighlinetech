@@ -1,0 +1,88 @@
+{
+	"key": "sc_tracking_scripts",
+	"title": "Tracking Scripts",
+	"fields": [
+		{
+			"key": "sc_ts_header_tracking_scripts",
+			"label": "Header Scripts",
+			"name": "sc_header_tracking_scripts",
+			"type": "textarea",
+			"value": null,
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"rows": 5,
+			"default_value": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"maxlength": ""
+		},
+		{
+			"key": "sc_ts_after_body_open_tracking_scripts",
+			"label": "After Body Open Scripts",
+			"name": "sc_after_body_open_tracking_scripts",
+			"type": "textarea",
+			"value": null,
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"rows": 5,
+			"default_value": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"maxlength": ""
+		},
+		{
+			"key": "sc_ts_footer_tracking_scripts",
+			"label": "Footer Scripts",
+			"name": "sc_footer_tracking_scripts",
+			"type": "textarea",
+			"value": null,
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"rows": 5,
+			"default_value": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"maxlength": ""
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "post_type",
+				"operator": "==",
+				"value": "page"
+			}
+		]
+	],
+	"menu_order": 99,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": [
+
+	],
+	"active": 1,
+	"description": ""
+}

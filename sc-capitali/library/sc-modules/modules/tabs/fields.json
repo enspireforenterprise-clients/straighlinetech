@@ -1,0 +1,122 @@
+{
+	"key": "scm_tabs",
+	"name": "tabs",
+	"label": "Tabs / Accordian",
+	"display": "block",
+	"sub_fields": [
+		{
+			"key": "scm_tabs_items",
+			"label": "Tabs",
+			"name": "tabs",
+			"type": "repeater",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"min": 1,
+			"max": "",
+			"layout": "block",
+			"button_label": "Add Tab",
+			"sub_fields": [
+				{
+					"key": "scm_tabs_label",
+					"label": "Tab Label",
+					"name": "tab_label",
+					"type": "text",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"placeholder": "",
+					"prepend": "",
+					"append": "",
+					"maxlength": "",
+					"readonly": 0,
+					"disabled": 0
+				},
+				{
+					"key": "scm_tabs_content",
+					"label": "Tab Content",
+					"name": "tab_content",
+					"type": "wysiwyg",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"tabs": "all",
+					"toolbar": "full",
+					"media_upload": 1
+				}
+			]
+		},
+		{
+			"key": "scm_tabs_display_mode",
+			"label": "Desktop Display",
+			"name": "display_mode",
+			"type": "radio",
+			"instructions": "Select tabs or accordion to control the desktop view. In mobile accordions will always display.",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"tabs": "Display Tabs In Desktop View",
+				"accordion": "Display Accordion In Desktop View"
+			},
+			"default_value": "tabs",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"maxlength": "",
+			"readonly": 0,
+			"disabled": 0
+		},
+		{
+			"key": "scm_tabs_headding",
+			"label": "Heading",
+			"name": "heading",
+			"type": "select",
+			"instructions": "Select Heading to display",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"h2": "H2",
+				"h3": "H3",
+				"h4": "H4",
+				"h5": "H5",
+				"h6": "h6"
+			},
+			"default_value": "h3",
+			"allow_null": 0,
+			"multiple": 0,
+			"ui": 0,
+			"return_format": "value",
+			"ajax": 0,
+			"placeholder": ""
+		}
+	],
+	"min": "",
+	"max": ""
+}

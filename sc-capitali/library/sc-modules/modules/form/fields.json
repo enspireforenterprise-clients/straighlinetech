@@ -1,0 +1,113 @@
+{
+	"key": "form_layout_000",
+	"name": "form",
+	"label": "Form",
+	"display": "block",
+	"sub_fields": [
+		{
+	    "key": "field_form_layout_001",
+	    "label": "Form Type",
+	    "name": "form_plugin",
+	    "type": "select",
+	    "instructions": "Select the type of form to use.",
+	    "required": 0,
+	    "conditional_logic": 0,
+	    "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+	    },
+	    "choices": {
+        "Gravity Forms": "Gravity Forms",
+		"Ninja Forms": "Ninja Forms",
+		"JavaScript Embed": "JavaScript Embed"
+	    },
+	    "default_value": [],
+	    "allow_null": 0,
+	    "multiple": 0,
+	    "ui": 0,
+	    "ajax": 0,
+	    "placeholder": "",
+	    "disabled": 0,
+	    "readonly": 0
+		},
+		{
+			"key": "scm_form_embed",
+			"label": "Form Embed Code",
+			"name": "embed_code",
+			"type": "textarea",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[
+				  {
+					  "field": "field_form_layout_001",
+					"operator": "==",
+					"value": "JavaScript Embed"
+				  }
+				]
+			  ],
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": "",
+			"maxlength": "",
+			"rows": "",
+			"new_lines": ""
+		},
+		{
+			"key": "field_form_layout_002",
+			"label": "Ninja Form",
+			"name": "ninja_form",
+			"type": "ninja_forms_field",
+			"instructions": "Select a form to display. The available forms can be managed from the <a href=\"#\">forms admin page</a>.",
+			"required": 0,
+			"conditional_logic": [
+        [
+          {
+        	  "field": "field_form_layout_001",
+            "operator": "==",
+            "value": "Ninja Forms"
+          }
+        ]
+      ],
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"allow_null": 0,
+			"allow_multiple": 0,
+			"multiple": 1
+		},
+		{
+			"key": "field_form_layout_003",
+			"label": "Gravity Form",
+			"name": "gravity_form",
+			"type": "gravity_forms_field",
+			"instructions": "Select a form to display. The available forms can be managed from the <a href=\"#\">forms admin page</a>.",
+			"required": 0,
+			"conditional_logic": [
+        [
+          {
+        	  "field": "field_form_layout_001",
+            "operator": "==",
+            "value": "Gravity Forms"
+          }
+        ]
+      ],
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"allow_null": 0,
+			"allow_multiple": 0
+		}
+	],
+	"min": "",
+	"max": ""
+}

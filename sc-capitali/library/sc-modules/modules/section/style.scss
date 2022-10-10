@@ -1,0 +1,12 @@
+
+// Section Module
+// -----------------------------------------------------------------------------
+
+.scm-section {
+	margin: 0 -15px 0 -15px;
+	@media #{$md-up} {
+		margin: 0 -15px 0 -15px;
+	}
+	display: flex;
+	flex-wrap: wrap;
+}

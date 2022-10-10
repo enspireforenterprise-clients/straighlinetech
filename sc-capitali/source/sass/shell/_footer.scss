@@ -1,0 +1,329 @@
+// Footer
+// -----------------------------------------------------------------------------
+
+#footer {
+	background: $neutral-2;
+	padding: 0 0 30px;
+	font-size: 1.3rem;
+	.footer-col {
+		@include clearfix();
+		text-align: center;
+		@media #{$lg-up} {
+			text-align: left;
+			padding-bottom: 20px;
+		}
+	}
+	p.disclaimer
+	{
+		color: #ffffff; 
+		margin-left: 10px;
+	}
+	p.copyright
+	{
+		color: #ffffff; 
+	}
+	.footer-col-right {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@media #{$lg-up} {
+			align-items: center;
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+	.logo {
+		display: inline-block;
+		margin: 0 0 20px 0;
+		width: 100%;
+		text-align: right;
+		svg {
+			display: block;
+			fill: $secondary-color;
+			height: auto;
+			width: 100%;
+		}
+	}
+	.footer-social {
+		padding: 30px 0 30px;
+		border-top: 1px solid $neutral-5;
+		border-bottom: 1px solid $border-color;
+		background: #fff; 
+		text-align: center;
+		.sc-social-icons {
+			margin: 0;
+			display: flex;
+			justify-content: center;
+			.sc-social-icon {
+				margin: 0 15px 0 0;
+				border: 1px solid $neutral-8;
+				border-radius: 50%;
+				//padding: 5px;
+			}
+		}
+	}
+	.footer-top {
+		padding-top: 6rem;
+		//padding-bottom: 2rem;
+		
+		text-align: center;
+		@media #{$sm-up} {
+			text-align: left;
+			padding-top: 6rem;
+		}
+		.contact {
+			font-family: $primary-font-family;
+			font-size: 1.6rem;
+			line-height: 1.8;
+			color: $footer-nav;
+			font-weight: normal;
+			strong {
+				font-weight: 600;
+			}
+		}
+	}
+	.footer-navigation{
+		ul,
+		li {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		.menu {
+			display: inline-block;
+			margin-top: 30px;
+			> li {
+				break-inside: avoid;
+				margin: 0 0 6rem;
+				@media #{$lg-up}{
+					margin: 0;
+					display: inline-block;
+					padding: 0px 10px 0 10px;
+				}
+				@media #{$md-up}{
+					display: inline-block;
+					margin-bottom: 5px;
+					padding: 0px 3px;				
+				}
+
+				a {
+					// font-family: $primary-font-family;
+					font-size: 1.6rem;
+					text-transform: none;
+					// font-weight: 500;
+					color: $footer-nav;
+					text-decoration: none;
+					display: block;
+					line-height: 1.8;
+					margin-bottom: 1.5rem;
+					transition: 500ms ease all;
+					&:hover,
+					&:focus {
+						text-decoration: underline;
+						text-underline-position: under;
+					}
+				}
+			}
+		}
+		.sub-menu {
+			> li > a {
+				font-size: 1.6rem;
+				text-transform: none;
+				color: $footer-nav;
+				font-weight: 400;
+				margin-bottom: 0;
+			}
+		}
+	}
+	.footer-location-navigation {
+		span.label {
+			display: block;
+			margin-bottom: 1.5rem;
+			font-size: 1.8rem;
+			color: $footer-nav;
+			font-weight: 500;
+			line-height: 1.8;
+		}
+		ul,
+		li {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		.menu {
+			text-align: center;
+			@media #{$sm-up} {
+				text-align: left;
+				columns: 2;
+			}
+			> li {
+				break-inside: avoid;
+			}
+
+			a {
+				color: $footer-nav;
+				font-size: 1.6rem;
+				line-height: 1.8;
+			}
+		}
+	}
+	.footer-bottom {
+		padding: 60px 0;
+		font-size: 1.3rem;
+		@media #{$lg-up}{
+			padding: 40px 0;
+		}
+		text-align: center;
+		display: block;
+		@media #{$sm-up} {
+			text-align: left;
+			display: flex;
+		}
+		@media #{$lg-up}{
+			align-items: center;
+		}
+		.footer-col-left {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: center;
+			flex-direction: column;
+			@media #{$sm-up} {
+				flex-direction: row;
+			}
+		}
+		.footer-col-right {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			@media #{$sm-up} {
+				flex-direction: row;
+				justify-content: flex-end;
+			}
+			@media #{$sm-only} {
+				flex-direction: column;
+				align-items: center;
+			}
+			@media #{$md-only} {
+				flex-direction: column;
+				align-items: center;
+			}
+			
+		}
+		.footer-navigation-small {
+			nav > ul {
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+				display: flex;
+				li {
+					display: block;
+					margin: 0 0 10px;
+					text-align: center;
+
+					@media #{$sm-up}{
+						text-align: left;
+					}
+					@media #{$xl-up} {
+						display: flex;
+						margin: 0 5px;
+					}
+					&:first-child {
+						margin-left: 0;
+					}
+					&:last-child {
+						margin-right: 0;
+					}
+					> a {
+						display: block;
+						font-size: 1.8rem;
+						color: $footer-nav;
+						font-family: $primary-font-family;
+						font-weight: 500;
+						margin-bottom: 1.5rem;
+						@media #{$xl-up}{
+							margin-right: 10px;
+							margin-bottom: 0;
+							display: flex;
+						}
+						text-decoration: none;
+					}
+					.sub-menu {
+						@media #{$lg-up}{
+							display: flex;
+						}
+						padding: 0;
+						li {
+							margin: 0;
+
+							&:first-child {
+								margin-left: 0;
+							}
+							&:last-child {
+								margin-right: 0;
+							}
+							@media #{$lg-up}{
+								margin: 0 5px;
+							}
+							a {
+								font-weight: 400;
+								font-size: 1.6rem;
+								line-height: 1.8;
+								margin: 0;
+								&:hover,
+								&:focus {
+									color: $primary-color;
+									text-decoration: underline;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.disclaimer {
+			color: $footer-nav; 
+			font-family: $primary-font-family;
+			font-size: 1.3rem;
+			line-height: 1.8rem;
+			padding-top: 3rem;
+			@media #{$sm-up} {
+				padding-top: 5rem;
+			}
+		}
+	
+	}
+}
+@media(max-width:767px)
+{.row.footer-top .col-sm-9.col-xs-12.col-lg-9, .row.footer-top .col-sm-3.col-xs-12.col-lg-3 {
+    width: 100%;
+    max-width: 100%;
+    flex: 100%;
+    text-align: center;
+}
+#footer .footer-navigation .menu {
+	margin-top: 10px;
+}
+#footer .footer-navigation .menu>li
+{
+	margin: 0 0 0rem!important;
+}
+#footer .footer-navigation .menu>li a {
+    margin-bottom: 0.5rem;
+}
+#footer .logo {
+    margin: 25px 0 20px 0;
+    width: auto;
+}
+	
+}
+
+@media(max-width:767px)
+{
+	.sc-social-icons .sc-social-icon
+	{
+		width: auto;
+	}
+}

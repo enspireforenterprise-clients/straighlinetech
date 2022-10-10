@@ -1,0 +1,144 @@
+
+// Base Colors
+// -----------------------------------------------------------------------------
+
+$primary-color:       #011327;
+$primary-color-light: #c6ddff;
+$secondary-color:     #98c800;
+$tertiary-color:      #717276;
+
+$neutral-11:          #f2f2f2;
+$neutral-10:          #212121;
+$neutral-9:           #353a3f;
+$neutral-8:           #4d4d4d;
+$neutral-7:           #717276;
+$neutral-6:           #8c8d91;
+$neutral-5:           #cfcfcf; //#cccccc;
+$neutral-4:           #e4e4e4;
+$neutral-3:           #eeeff2;
+$neutral-2:           #011327;
+$neutral-1:           #f8f9fc;
+
+$red:                 #f00;
+$footer-nav:          #ffffff;
+$border-color:        $neutral-5;
+
+// Transition Speeds
+// -----------------------------------------------------------------------------
+
+$transition-fast:   300ms;
+$transition-medium: 450ms;
+$transition-slow:   600ms;
+  
+// Base Typography
+// -----------------------------------------------------------------------------
+
+$primary-font-family:   'Montserrat', sans-serif;
+$primary-font-color:    #011327;
+
+$secondary-font-family: 'Montserrat', sans-serif;
+$secondary-font-color:  $neutral-10;
+
+$bebas-top-ratio:       .043333;
+$bebas-glyph-ratio:     .71;
+$bebas-bottom-ratio:    .246666;
+
+$link-color:            $primary-color;
+$link-color-hover:      $primary-color;
+
+// Modules
+// -----------------------------------------------------------------------------
+
+// $vertical-rhythm-desktop: 60px;
+// $vertical-rhythm-mobile:  30px;
+
+$module-bottom-margin:       30px;
+$module-bottom-margin-md-up: 60px;
+
+$module-bottom-margin--large:       60px;
+$module-bottom-margin-md-up--large: 90px;
+
+// Buttons
+// -----------------------------------------------------------------------------
+
+$button-font-color                       : $primary-font-color;
+$button-font-family                      : $primary-font-family;
+$button-border-color                     : $primary-font-color;
+$button-background-color                 : transparent;
+$button-font-color-hover                 : #fff;
+$button-border-color-hover               : $primary-color;
+$button-background-color-hover           : $primary-color;
+
+$button-secondary-font-color             : #fff;
+$button-secondary-font-family            : $primary-font-family;
+$button-secondary-border-color           : $secondary-color;
+$button-secondary-background-color       : $secondary-color;
+$button-secondary-font-color-hover       : $primary-font-color;
+$button-secondary-border-color-hover     : $primary-font-color;
+$button-secondary-background-color-hover : #fff;
+
+$button-disabled-font-color             : $neutral-6;
+$button-disabled-font-family            : $primary-font-family;
+$button-disabled-border-color           : $neutral-5;
+$button-disabled-background-color       : $neutral-1;
+$button-disabled-font-color-hover       : $neutral-6;
+$button-disabled-border-color-hover     : $neutral-5;
+$button-disabled-background-color-hover : $neutral-1;
+
+// Responsive Tables
+// -----------------------------------------------------------------------------
+
+$thead-font-color:           #fff;
+$thead-font-family:          $primary-font-family;
+$thead-border-color:         $secondary-color;
+$thead-background-color:     $secondary-color;
+$thead-background-color-alt: $primary-color;
+
+$tbody-font-color:           $primary-font-color;
+$tbody-font-family:          $primary-font-family;
+$tbody-border-color:         $border-color;
+$tbody-background-color:     #fff;
+$tbody-background-color-alt: #fff;
+
+// Tabs Module
+// -----------------------------------------------------------------------------
+
+$tab-label-background-color:          $neutral-11;
+$tab-label-font-color:                #343740;
+$tab-label-border-color:              $neutral-11;
+
+$tab-label-selected-background-color: #fff;
+$tab-label-selected-font-color:       #343740;
+$tab-label-selected-border-color:     $border-color;
+
+$tab-panel-background-color:          #fff;
+$tab-panel-font-color:                $primary-font-color;
+$tab-panel-border-color:              $border-color;
+
+// WooCommerce
+// -----------------------------------------------------------------------------
+
+$star-color: $primary-color;
+
+// Form Styles
+// -----------------------------------------------------------------------------
+
+$form-input-background-color:          $neutral-11;
+$form-input-border-color:              $neutral-5;
+$form-input-font-color:                $primary-font-color;
+$form-input-disabled-background-color: $neutral-1;
+$form-input-disabled-border-color:     $neutral-4;
+$form-input-disabled-font-color:       $neutral-5;
+$form-input-font-family:               $primary-font-family;
+$form-error-color:                     #790000;
+$form-success-color:                   #054619;
+$form-input-font-size:                 1.5rem;
+$form-input-height:                    48px;
+$form-input-font-size-md-up:           1.5rem;
+$form-input-height-md-up:              48px;
+
+// WordPress Admin Bar
+// -----------------------------------------------------------------------------
+
+$wp-admin-bar-desktop-height: 32px;
+$wp-admin-bar-mobile-height:  46px;

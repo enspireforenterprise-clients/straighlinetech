@@ -1,0 +1,269 @@
+
+// Hero Module
+// -----------------------------------------------------------------------------
+
+$arrow-size: 40px;
+
+.slick-list.draggable{    min-height: 550px!important;}
+
+.scm-hero-mobile
+{display: none;}
+.scm-hero .slick-dots li.slick-active button::before {
+    background: #fff;
+    border-color: #fff;
+}
+.scm-hero .slick-dots li button::before {
+    height: 13px;
+    width: 13px;
+    background: transparent;
+}
+.scm-hero {
+	background: #fff;
+	margin-left: -15px !important;
+	margin-right: -15px !important;
+	overflow: hidden;
+	position: relative;
+	width: calc(100% + 30px);
+    max-height: 800px;
+    min-height: 575px;
+	@media(min-width:2200px)
+	{
+		max-height: 100%;
+	}
+	@media #{$lg-up}{
+		height: calc(100vh - #{$header-desktop-height} - 74px);
+	}
+
+	.slick-dots li button:hover::before, .slick-dots li button:focus::before, .slick-dots li button:active::before
+	{ 
+		background: #fff!important;
+		border-color: #fff!important;
+	}
+
+.scm-hero__content__cta a{    
+    border: 2px solid;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    }
+
+    .scm-cts-container {
+        float: left;
+        margin-top: 20px;
+		.primary-color {
+			color: $primary-color;
+		}
+		.primary-color-light
+		{
+			color: $primary-color-light;
+		}
+		.secondary-color
+		{
+			color: $secondary-color;
+		}
+		.tertiary-color
+		{
+			color: $tertiary-color;
+		}
+    }
+
+	.slick-list {
+        max-width: 100%;
+        margin: 0 auto;
+        overflow: inherit;
+        height: 300px;
+		@media #{$lg-up}{
+			height: calc(100vh - #{$header-desktop-height} - 94px - 75px);
+		}
+	}
+	.slick-track {
+		height: 100%;
+	}
+
+	.slick-arrow {
+		display: none !important;
+        position: relative;
+        background-size: 30px 27px;
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAMAAABrrFhUAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAALFQTFRFAAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////t5hynAAAADt0Uk5TABuN2PjvvV8DUfP/xRdd/M0JWPt54gEcLBTQXKm4CFe2Byr2qyknubeqVtEV4XfLT/LEFhmK1vfsu14mDsaDAAACF0lEQVR4nO3cWVIVQRgF4YsTaAuCyiSTiqggzoDK/hcGcQGBrvf/QNSXKziZ0d3VTzWZAAAAAAAAAAAAAAAA3BVmHjx89PjJ7Fx6R4qnz4Ypz+fTSzIsvBguWVxKb0nw8tXwn9fpMQFu+g/LK+k55Vw//1NW03uqGfkPa+lBxYz9h/X0oloa/zfpRbU0/sNGelIprf9mV4fArfNvytZ2elMl/Pnz58+fP3/+/PmnN1XCnz9//vz58+fPn396UyX8+fPnz58/f/78+ac3VcKfP3/+/Pnz58+ff3pTJfz58+fPnz9//vz5pzdVwp8/f/78+fPnz59/elMl/Pnz58+fP3/+/PmnN1XCv2//neb+w7fv0psqeb/bt//kQ+f+S+MHoDP/yV7X379zPo4CfOrtIvjt8SvwubdHYH/8EeytwF5zDPZW4KD5EeqtwE7zK9zbl1ABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFDgQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBbovsNHc0Li/kt5US1tgIT2pmKbAl/SiapoCh+lF1YwLrKUHlTMqsJreU8+t0/Brek2CmwW+pcdEuH4Lvnd2U/MVP35e+P/6nV6S4uj45M/ff6dz6R0AAAAAAAAAAAAAAODecQZ27Mxs+puW6wAAAABJRU5ErkJggg==);
+        background-repeat: no-repeat;
+        background-color: transparent;
+        background-position: center;
+        border: none;
+		@media #{$lg-up}{
+			display: block !important;
+			top: calc(50% - 25px);
+		}
+
+	}
+
+	.slick-prev {
+		left: 32px;
+        position:absolute;
+	}
+	.slick-next {
+        right: 32px;
+        top: 50%;
+        position: absolute;
+        left: auto;
+	}
+
+	.slick-dots {
+		top: calc(100% - 50px);
+		right: 45px;
+		@media #{$lg-up}{
+			left: 32px;
+		}
+		
+	}
+	&__slide {
+		height: 100%;
+        min-height: 550px;
+		display: flex !important;
+		flex-direction: column-reverse;background-size: cover;
+
+		@media #{$lg-up}{
+			flex-direction: row;
+		}
+	}
+	&__content {
+		display: flex;
+		padding: 0 20px;
+		@media #{$lg-up}{
+			width: 50%;
+		}
+		justify-content: center;
+		flex-direction: column;
+		@media #{$lg-up}{
+			padding: 0 50px 0 145px;
+		}
+		
+		&__tagline {
+			font-size: 1.5rem;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+		}
+		&__title {
+			@media #{$lg-up}{
+				max-width: 600px;
+			}
+			@media #{$xl-only}{
+				font-size: 5rem;
+			}
+		}
+	}
+	&__image {
+		height: 320px;
+		margin: 0 0 0px 0;
+		@media #{$md-up}{
+			height: 300px;
+		}
+
+		@media #{$lg-up}{
+			width: 50%;
+			height: 100%;
+		}
+		
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+
+		@media #{$lg-only}{
+			background-position: left center
+		}
+	}
+	
+}
+@media #{$lg-up}{
+
+.scm-hero__slider.slick-initialized.slick-slider.slick-dotted, .scm-hero__slide, .scm-hero {
+    max-height: 800px!important;
+}
+
+}
+
+@media(max-width:992px) and (min-width:767px)
+{
+	.scm-hero .scm-hero__slide {
+		display: table !important;
+	}
+	.scm-hero .scm-hero__content {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+}
+
+@media(max-width:992px)
+{
+    .scm-hero .slick-arrow {
+        display: block !important;
+    }
+    .scm-hero .slick-prev {
+        left: 32px;
+        right: 32px;
+        top: 50%;
+        position: absolute;
+    }
+    .scm-hero__content {
+        padding: 15px 100px;
+    } 
+	.scm-hero .slick-dots {
+		right: 0;
+		left: 0;
+	}
+}
+
+
+@media(max-width:767px)
+{
+   
+.scm-hero-mobile
+{
+    display: block!important;
+}
+.scm-hero__content {
+    min-height: 215px;
+    background-color: #ffffff;
+}
+.scm-hero .slick-list {
+    height: 460px;
+}
+.scm-hero {
+    min-height: 400px;
+	border-bottom: 1px solid #cfcfcf;
+}
+.scm-hero .scm-hero__content__inner p span {
+    color: $primary-color!important;
+}
+.scm-hero__content {
+    padding: 15px 35px!important;
+}
+.scm-hero .slick-next {
+    top: 28%;right: 30px;
+}
+.scm-hero .slick-prev {
+    left: 20px!important;
+    top: 28%!important;
+}
+.scm-hero .slick-dots {
+    top: calc(56% - 41px);
+}
+.scm-hero__slide {
+    background-image: none!important;
+	top: -13px!important;
+}
+}
+
+@media(max-width:380px)
+{
+	.scm-hero__content {
+		min-height: 315px;
+	}
+	.scm-hero .slick-dots {
+		top: calc(40% - 41px);
+	}
+	.scm-hero .slick-next, .scm-hero .slick-prev {
+		top: 20%!important;
+	}
+}

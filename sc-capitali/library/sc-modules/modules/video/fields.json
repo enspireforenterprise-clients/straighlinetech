@@ -1,0 +1,152 @@
+{
+	"key": "scm_video",
+	"name": "video",
+	"label": "Video",
+	"display": "block",
+	"sub_fields": [
+		{
+			"key": "scm_video_media",
+			"label": "Media",
+			"name": "media",
+			"type": "group",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "100",
+				"class": "",
+				"id": ""
+			},
+			"layout": "block",
+			"sub_fields": [
+				{
+					"key": "scm_source_type",
+					"label": "Source Type",
+					"name": "source",
+					"type": "select",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"choices": {
+						"oembed": "YouTube or Vimeo",
+						"local": "Uploaded to Website",
+						"external": "External URL"
+					},
+					"default_value": "oembed",
+					"allow_null": 0,
+					"multiple": 0,
+					"ui": 0,
+					"ajax": 0,
+					"return_format": "value",
+					"placeholder": ""
+				},
+				{
+					"key": "scm_video_oembed",
+					"label": "YouTube or Vimeo URL",
+					"name": "oembed",
+					"type": "oembed",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": [
+						[
+							{
+								"field": "scm_source_type",
+								"operator": "==",
+								"value": "oembed"
+							}
+						]
+					],
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"width": "",
+					"height": ""
+				},
+				{
+					"key": "scm_video_upload",
+					"label": "Upload Video",
+					"name": "upload_video",
+					"type": "file",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": [
+						[
+							{
+								"field": "scm_source_type",
+								"operator": "==",
+								"value": "local"
+							}
+						]
+					],
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"width": "",
+					"height": ""
+				},
+				{
+					"key": "scm_video_ext_url",
+					"label": "Video URL",
+					"name": "ext_video",
+					"type": "text",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": [
+						[
+							{
+								"field": "scm_source_type",
+								"operator": "==",
+								"value": "external"
+							}
+						]
+					],
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"placeholder": "",
+					"prepend": "",
+					"append": "",
+					"maxlength": ""
+				},
+				{
+					"key": "scm_video_cover_image",
+					"label": "Cover Image",
+					"name": "cover_image",
+					"type": "image",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"return_format": "array",
+					"preview_size": "original",
+					"library": "all",
+					"min_width": "",
+					"min_height": "",
+					"min_size": "",
+					"max_width": "",
+					"max_height": "",
+					"max_size": "",
+					"mime_types": ""
+				}
+			]
+		}
+	],
+	"min": "",
+	"max": ""
+}

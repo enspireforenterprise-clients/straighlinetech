@@ -1,0 +1,336 @@
+
+// Font Loading
+// -----------------------------------------------------------------------------
+
+@import url("https://use.typekit.net/nzc2ava.css");
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans&display=swap');
+
+// Typography
+// -----------------------------------------------------------------------------
+
+html {
+	font-size: 62.5%; // set base font size of 10px required for rem() mixin.
+}
+
+html body {
+	background: #fff;
+	color: $primary-font-color;
+	font-family: $primary-font-family;
+	font-size: 1.6rem;
+	line-height: 2.4rem;
+	text-align: left;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $primary-font-color;
+	font-family: $secondary-font-family;
+	margin: 0 0 20px 0;
+	a {
+		color: $secondary-font-color;
+	}
+}
+
+h1 {
+	font-size: 3.8rem;
+	font-weight: 700;
+	line-height: 3.2rem;
+
+	@media #{$lg-up}{
+		font-size: 4.0rem;
+		line-height: 4.2rem;
+	}
+	@media #{$xl-up}{
+		font-size: 5.8rem;
+		line-height: 6.2rem;
+	}
+}
+
+h2 {
+	font-size: 3.6rem;
+	font-weight: bold;
+	line-height: 3.0rem;
+
+	@media #{$lg-up}{
+		font-size: 4.5rem;
+		line-height: 4.8rem;
+		font-weight: bold;
+	}
+}
+
+h3 {
+	font-size: 2.0rem;
+	font-weight: 700;
+	line-height: 2.6rem;
+
+	@media #{$lg-up}{
+		font-size: 2.9rem;
+		line-height: 3.2rem;font-weight: 700;
+	}
+}
+
+h4 {
+	font-size: 2.2rem;
+	font-weight: 700;
+	line-height: 2.4rem;
+}
+
+h5 {
+	font-size: 1.8rem;
+	font-weight: 700;
+	line-height: 1.9rem;
+	color: $neutral-8;
+}
+
+h6 {
+	font-size: 1.3rem;
+	font-weight: 400;
+	letter-spacing: .05em;
+	line-height: 1.6rem;
+	text-transform: uppercase;
+}
+
+p {
+	margin: 0 0 20px 0;
+}
+
+a {
+	color: $link-color;
+	text-decoration: none;
+	@include hover() {
+		color: $link-color-hover;
+		text-decoration: underline;
+	}
+}
+
+small {
+	display: inherit;
+	font-size: 1.2rem;
+	letter-spacing: 0;
+	line-height: 1.6rem;
+}
+
+hr {
+	border: 0;
+	border-bottom: 1px solid $neutral-5;
+}
+
+.sc-link {
+	color: $primary-font-color;
+	display: inline-block;
+	font-size: 1.3rem;
+	line-height: 1.6rem;
+	font-weight: 600;
+	letter-spacing: .15em;
+	padding: 0 10px 0 0;
+	position: relative;
+	text-transform: uppercase;
+	&::after {
+		border-right: 2px solid $primary-font-color;
+		border-top: 2px solid $primary-font-color;
+		content: '';
+		display: block;
+		height: 5px;
+		position: absolute;
+		top: 5px;
+		transform: rotate(45deg);
+		transition: border-right 250ms ease, border-top 250ms ease;
+		width: 5px;
+		@media #{$sm-up}{
+			height: 7px;
+			top: 4px;
+			width: 7px;
+		}
+	}
+	@include hover() {
+		color: $link-color-hover;
+		&::after {
+			border-right: 2px solid $link-color-hover;
+			border-top: 2px solid $link-color-hover;
+		}
+	}
+}
+
+.sc-link-caret {
+	position: relative;
+	display: inline-block;
+	&::after {
+		content: '>>';
+		bottom: -2px;
+		position: absolute;
+		letter-spacing: -0.1em;
+		transform: scale(0.4, 1);
+		color: $primary-color;
+	}
+
+	&--underlined {
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			bottom: 6px;
+			background: $primary-color;
+		}
+	}
+
+	&--body-color {
+		color: $primary-font-color;
+
+		&::after {
+			color: $primary-color;
+		}
+	}
+}
+
+.sc-link--left {
+	padding: 0 0 0 10px;
+	&::after {
+		left: 0;
+		right: initial;
+		transform: rotate(225deg);
+	}
+}
+
+.sc-wysiwyg {
+	img {
+		@include img-responsive();
+	}
+	p {
+		@extend p;
+	}
+	ul {
+		list-style: none;
+		margin: 0 0 20px 0;
+		padding: 0;
+		li {
+			margin: 0 0 10px 0;
+			padding: 0 0 0 25px;
+			position: relative;
+			&::before {
+				content: '';
+				height: 6px;
+				width: 6px;
+				left: 0;
+				background: $secondary-color; 
+				position: absolute;
+				top: 7px;    border-radius: 50px;
+
+			}
+		}
+		ul {
+			margin: 10px 0 0 0;
+		}
+		ul li {
+			&::before {
+				background: transparent;
+			}
+		}
+		ul ul li {
+			&::before {
+				background: $secondary-color;
+				border-radius: 0;
+			}
+		}
+	}
+	ol {
+		counter-reset: item;
+		list-style: none;
+		margin: 0 0 20px 0;
+		padding: 0;
+		li {
+			margin: 0 0 10px 0;
+			padding: 0 0 0 25px;
+			position: relative;
+			&::before {
+				content: counter(item) '. ';
+				counter-increment: item;
+				color: $primary-font-color;
+				display: block;
+				font-weight: 700;
+				left: 0;
+				position: absolute;
+				top: 0;
+			}
+		}
+		ol {
+			margin: 10px 0 0 0;
+		}
+		ol li {
+			&::before {
+				content: counter(item, lower-alpha) '.';
+			}
+		}
+		ol ol li {
+			&::before {
+				content: counter(item, lower-roman) '.';
+			}
+		}
+	}
+	blockquote {
+		background: #fff;
+		border: 1px solid $neutral-5;
+		color: #343740;
+		font-family: $primary-font-family;
+		font-size: 1.7rem;
+		font-weight: 500;
+		line-height: 2.8rem;
+		padding: 40px 20px 10px;
+		text-align: center;
+		text-transform: none;
+
+		@media #{$sm-up}{
+			font-size: 1.6rem;
+			line-height: 2.8rem;
+			padding: 25px 20px 10px;
+		}
+
+		p:last-child:not(:first-child) {
+			margin: 0;
+			padding: 20px 0 0 0;
+			position: relative;
+			&::before {
+				background: $primary-color;
+				content: '';
+				display: inline-block;
+				height: 3px;
+				left: calc(50% - 50px);
+				position: absolute;
+				top: 0;
+				width: 100px;
+			}
+		}
+		i, b, strong {
+			color: $primary-font-color;
+			display: block;
+			font-family: $primary-font-family;
+			font-size: 1.3rem;
+			font-weight: 700;
+			letter-spacing: .125em;
+			line-height: 2.4rem;
+			text-transform: uppercase;
+			margin-top: 20px;
+		}
+		em {
+			color: $primary-font-color;
+			display: block;
+			font-family: $primary-font-family;
+			font-size: 1.2rem;
+			font-weight: 500;
+			letter-spacing: .125em;
+			line-height: 2.4rem;
+			text-transform: uppercase;
+			margin-top: 20px;
+		}
+	}
+	iframe {
+		max-width: 100%;
+	}
+}
