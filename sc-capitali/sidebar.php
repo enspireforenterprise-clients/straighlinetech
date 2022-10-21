@@ -37,7 +37,7 @@ if ( have_posts() ) {
 							SC_Modules::singleton()->container_open  = '<div class="row">';
 							SC_Modules::singleton()->container_close = '</div>';
 							SC_Modules::singleton()->set_modules( sc_get_modules_above_page_break() );
-							SC_Modules::display_modules();
+							(new SC_Modules())->display_modules();
 
 						?>
 					</div>
@@ -48,7 +48,7 @@ if ( have_posts() ) {
 			SC_Modules::singleton()->container_open  = '<div class="container sc-module-container"><div class="row">';
 			SC_Modules::singleton()->container_close = '</div></div>';
 			SC_Modules::singleton()->set_modules( sc_get_modules_below_page_break() );
-			SC_Modules::display_modules();
+			(new SC_Modules())->display_modules();
 
 			?>
 			<div class="container">

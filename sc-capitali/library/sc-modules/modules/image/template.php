@@ -12,8 +12,8 @@ SC_Image_Module::set_data( $module );
 
 				$image = sc_get_image( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=', array(
 					'data-src' => esc_url( SC_Image_Module::get_image() ),
-					'width'    => (int) SC_Image_Module::get_width(),
-					'height'   => (int) SC_Image_Module::get_height(),
+					'width'    => (int) (new SC_Image_Module())->get_width(),
+					'height'   => (int) (new SC_Image_Module())->get_height(),
 					'class'    => esc_attr( SC_Image_Module::get_classes() ),
 					'alt'      => esc_attr( SC_Image_Module::get_alt() )
 				));
@@ -33,7 +33,7 @@ SC_Image_Module::set_data( $module );
 					'<div class="scm-image__container" style="padding-bottom:%d%%">
 						<a href="%s" target="%s"m class="scm-image__container__link">%s</a>
 					</div>',
-					(float) SC_Image_Module::get_aspect_ratio(),
+					(float) (new SC_Image_Module())->get_aspect_ratio(),
 					esc_url( SC_Image_Module::get_url() ),
 					esc_attr( SC_Image_Module::get_url_target() ),
 					$image
@@ -43,7 +43,7 @@ SC_Image_Module::set_data( $module );
 
 				printf(
 					'<div class="scm-image__container" style="padding-bottom:%d%%">%s</div>',
-					(float) SC_Image_Module::get_aspect_ratio(),
+					(float) (new SC_Image_Module())->get_aspect_ratio(),
 					$image
 				);
 

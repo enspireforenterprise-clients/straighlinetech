@@ -31,7 +31,8 @@ if( ! class_exists( 'SCM_Video' ) ) {
 				
 			}
 
-			$youtube_id = SCM_Video::get_youtube_id( $url );
+			//$youtube_id = SCM_Video::get_youtube_id( $url );
+			$youtube_id = (new SCM_Video())->get_youtube_id( $url );
 
 			if( false !== $youtube_id ) {
 
