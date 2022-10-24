@@ -28,7 +28,7 @@
 					"name": "tab_label",
 					"type": "text",
 					"instructions": "",
-					"required": 0,
+					"required": 1,
 					"conditional_logic": 0,
 					"wrapper": {
 						"width": "",
@@ -49,7 +49,7 @@
 					"name": "tab_content",
 					"type": "wysiwyg",
 					"instructions": "",
-					"required": 0,
+					"required": 1,
 					"conditional_logic": 0,
 					"wrapper": {
 						"width": "",
